@@ -46,10 +46,13 @@ h1 {
     font-size: 36px;
 }
 
-/*
-.pp_photographer{
-    
-}*/
+
+.pp_photographer > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .img_pp_photographer{
     height: 200px;
@@ -67,3 +70,8 @@ h1 {
 
     max-width: 155%;
 }
+
+a{
+    text-decoration: none;
+}
+
