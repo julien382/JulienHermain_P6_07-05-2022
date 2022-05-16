@@ -10,13 +10,15 @@ export const indexPhotographerFactory = (data) => {
         // <h2></h2>
         // <img></img>
         const userCardDom = document.createElement( 'article' );
+        const a = document.createElement( 'a' );
         const img = document.createElement( 'img' );
         const h2 = document.createElement( 'h2' );
         const p = document.createElement( 'p' );
 
         // on remplie nos balises
+        a.setAttribute("href", "id")
         img.setAttribute("src", picture)
-        img.setAttribute("class", "pp_photographer", userCardDom)
+        userCardDom.setAttribute("class", "pp_photographer", userCardDom)
         img.setAttribute("class", "img_pp_photographer", picture)
         h2.textContent = name;
         p.textContent = city + ", " + country + tagline + price;
@@ -28,6 +30,7 @@ export const indexPhotographerFactory = (data) => {
         //        <h2>Mimi Keel</h2>
         //    </a>
         // </article>
+        userCardDom.appendChild(a);
         userCardDom.appendChild(img);
         userCardDom.appendChild(h2);
         userCardDom.appendChild(p);
