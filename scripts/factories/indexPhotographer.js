@@ -25,8 +25,10 @@ export const indexPhotographerFactory = (data) => {
         userCardDom.setAttribute("class", "pp_photographer")
         h2.textContent = name;
         pCity.textContent = city + ", " + country;
+        pCity.setAttribute("class", "pCity__pp_photographer")
         pTagline.textContent = tagline;
         pPrice.textContent =  price + "€/jour";
+        pPrice.setAttribute("class", "pPrice__pp_photographer")
         // on les insère dans la balise article
         // <article>
         //     <a href='./photographer.html?id=65464'>
