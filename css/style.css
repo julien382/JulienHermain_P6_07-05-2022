@@ -60,6 +60,7 @@ h1 {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    margin-bottom: 25px;
 }
 
 .img_pp_photographer img{
@@ -77,9 +78,12 @@ a{
 
 .pCity__pp_photographer{
     color: #901C1C;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .pPrice__pp_photographer{
     color:darkgray;
+    margin-top: 10px;
 }
 
