@@ -26,7 +26,7 @@ export const indexPhotographerFactory = (data) => {
         h2.textContent = name;
         pCity.textContent = city + ", " + country;
         pTagline.textContent = tagline;
-        pPrice.textContent =  price;
+        pPrice.textContent =  price + "€/jour";
         // on les insère dans la balise article
         // <article>
         //     <a href='./photographer.html?id=65464'>
@@ -38,9 +38,9 @@ export const indexPhotographerFactory = (data) => {
         a.appendChild(div);
         div.appendChild(img);
         a.appendChild(h2);
-        a.appendChild(pCity);
-        a.appendChild(pTagline);
-        a.appendChild(pPrice);
+        userCardDom.appendChild(pCity);
+        userCardDom.appendChild(pTagline);
+        userCardDom.appendChild(pPrice);
 
         // on retourne la balise article
         return userCardDom;
