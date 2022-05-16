@@ -1,7 +1,7 @@
 export const indexPhotographerFactory = (data) => {
     // const name = data.name
     // const portrait = data.portrait
-    const { name, portrait } = data;
+    const { name, id, city, country, tagline, price, portrait } = data;
 
     const picture = `assets/photographers/${portrait}`;
 
@@ -12,13 +12,14 @@ export const indexPhotographerFactory = (data) => {
         const userCardDom = document.createElement( 'article' );
         const img = document.createElement( 'img' );
         const h2 = document.createElement( 'h2' );
-        /*const p = document.createElement( 'p' );*/
+        const p = document.createElement( 'p' );
 
         // on remplie nos balises
         img.setAttribute("src", picture)
+        img.setAttribute("class", "pp_photographer", userCardDom)
         img.setAttribute("class", "img_pp_photographer", picture)
         h2.textContent = name;
-        /*p.textContent = city;*/
+        p.textContent = city;
 
         // on les insère dans la balise article
         // <article>
@@ -29,13 +30,13 @@ export const indexPhotographerFactory = (data) => {
         // </article>
         userCardDom.appendChild(img);
         userCardDom.appendChild(h2);
-        /*userCardDom.appendChild(p);*/
+        userCardDom.appendChild(p);
 
         // on retourne la balise article
         return userCardDom;
     }
 
-    return { name, /*city,*/ picture, getUserCardDOM }
+    return { name, city, picture, getUserCardDOM }
 }
 
 export const displayData = async (photographers) => {
