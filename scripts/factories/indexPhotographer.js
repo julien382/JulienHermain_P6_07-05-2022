@@ -14,7 +14,9 @@ export const indexPhotographerFactory = (data) => {
         const div = document.createElement( 'div' );
         const img = document.createElement( 'img' );
         const h2 = document.createElement( 'h2' );
-        const p = document.createElement( 'p' );
+        const pCity = document.createElement( 'p' );
+        const pTagline = document.createElement( 'p' );
+        const pPrice = document.createElement( 'p' );
 
         // on remplie nos balises
         a.setAttribute("href", id)
@@ -22,8 +24,9 @@ export const indexPhotographerFactory = (data) => {
         img.setAttribute("src", picture)
         userCardDom.setAttribute("class", "pp_photographer")
         h2.textContent = name;
-        p.textContent = city + ", " + country + tagline + price;
-
+        pCity.textContent = city + ", " + country;
+        pTagline.textContent = tagline;
+        pPrice.textContent =  price;
         // on les insère dans la balise article
         // <article>
         //     <a href='./photographer.html?id=65464'>
@@ -35,13 +38,15 @@ export const indexPhotographerFactory = (data) => {
         a.appendChild(div);
         div.appendChild(img);
         a.appendChild(h2);
-        a.appendChild(p);
+        a.appendChild(pCity);
+        a.appendChild(pTagline);
+        a.appendChild(pPrice);
 
         // on retourne la balise article
         return userCardDom;
     }
 
-    return { name, city, picture, getUserCardDOM }
+    return { name, id, city, country, tagline, price, portrait, getUserCardDOM }
 }
 
 export const displayData = async (photographers) => {
