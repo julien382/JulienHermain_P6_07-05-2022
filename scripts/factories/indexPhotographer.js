@@ -17,7 +17,7 @@ export const indexPhotographerFactory = (data) => {
         const p = document.createElement( 'p' );
 
         // on remplie nos balises
-        a.setAttribute("href", "id")
+        a.setAttribute("href", id)
         div.setAttribute("class", "img_pp_photographer")
         img.setAttribute("src", picture)
         userCardDom.setAttribute("class", "pp_photographer")
@@ -32,10 +32,10 @@ export const indexPhotographerFactory = (data) => {
         //    </a>
         // </article>
         userCardDom.appendChild(a);
-        userCardDom.appendChild(div);
-        userCardDom.appendChild(img);
-        userCardDom.appendChild(h2);
-        userCardDom.appendChild(p);
+        a.appendChild(div);
+        div.appendChild(img);
+        a.appendChild(h2);
+        a.appendChild(p);
 
         // on retourne la balise article
         return userCardDom;
