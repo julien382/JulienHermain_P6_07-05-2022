@@ -19,7 +19,7 @@ export const indexPhotographerFactory = (data) => {
         img.setAttribute("class", "pp_photographer", userCardDom)
         img.setAttribute("class", "img_pp_photographer", picture)
         h2.textContent = name;
-        p.textContent = city;
+        p.textContent = city + ", " + country + tagline + price;
 
         // on les insère dans la balise article
         // <article>
