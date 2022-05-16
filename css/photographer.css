@@ -74,11 +74,24 @@ form input {
     border: none;
     border-radius: 5px;
 }
-
+/*
 .pp_photographer{
     
-}
+}*/
 
 .img_pp_photographer{
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_pp_photographer img{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    max-width: 155%;
 }
