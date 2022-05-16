@@ -16,7 +16,7 @@ header {
 
 h1 {
     color: #901C1C;
-    font-size: 35px;
+    font-size: 36px;
     margin-right: 100px;
 }
 
@@ -82,7 +82,7 @@ a{
 }
 
 .pPrice__pp_photographer{
-    color:darkgray;
+    color:#757575;
     margin-top: 10px;
 }
 
