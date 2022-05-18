@@ -1,50 +1,33 @@
-//Mettre le code JavaScript lié à la page photographer.html
-export const indexPhotographerFactory = (data) => {
-    // const name = data.name
-    // const portrait = data.portrait
-    const { name, id, city, country, tagline, price, portrait } = data;
+import { displayData } from "../factories/pagePhotographers.js";
+import { getMedias, getPhotographers } from "../utils/dataHandler.js";
+import { getParamUrl } from "../utils/paramUrl.js";
 
-    const picture = `assets/photographers/${portrait}`;
+const init = async () => {
+    const id = getParamUrl("id")
+    const photographers = await getPhotographers()
+    const medias = await getMedias()
 
-    const getUserCardDOM = () => {
+    let photographer = null
 
-        const userCardDom = document.createElement( 'article' );
-        const div = document.createElement( 'div' );
-        const img = document.createElement( 'img' );
-        const h1 = document.createElement( 'h1' );
-        const pCity = document.createElement( 'p' );
-        const pTagline = document.createElement( 'p' );
-
-        // on remplie nos balises
-        
-        userCardDom.setAttribute("class", "pp_photographer")
-        h1.textContent = name;
-        pCity.textContent = city + ", " + country;
-        pCity.setAttribute("class", "pCity__pp_photographer")
-        pTagline.textContent = tagline;
-
-        div.setAttribute("class", "img_pp_photographer")
-        img.setAttribute("src", picture)
-
-        userCardDom.appendChild(div);
-        userCardDom.appendChild(img);
-        userCardDom.appendChild(h1);
-        userCardDom.appendChild(pCity);
-        userCardDom.appendChild(pTagline);
-
-        // on retourne la balise article
-        return userCardDom;
+    for(let i=0; i<photographers.length; i++){
+        const photographerId = photographers[i].id
+        if (photographerId == id) {
+            photographer = photographers[i]
+        }
     }
 
-    return { name, id, city, country, tagline, price, portrait, getUserCardDOM }
-}
+    console.log(photographer)
+    displayData(photographer)
 
-export const displayData = async (photographers) => {
-    const photographersSection = document.querySelector(".photographer_section");
-
-    photographers.forEach((photographer) => {
-        const photographerModel = indexPhotographerFactory(photographer);
-        const userCardDOM = photographerModel.getUserCardDOM();
-        photographersSection.appendChild(userCardDOM);
-    });
+    //displayMedia(media)
 };
+
+
+
+// récupérer l'id dans l'url
+// récupérer les données
+// récup les données relatives à l'id pour les afficher
+// afficher les data
+init();
+
+    
