@@ -74,3 +74,35 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+.pp_photographers{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_pp_photographers{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.img_pp_photographers img{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    max-width: 155%;
+}
+
+.pCity__pp_photographers{
+    color: #901C1C;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
