@@ -1,5 +1,5 @@
 import { displayData } from "../factories/pagePhotographers.js";
-import { displayMedia } from "../factories/pagePhotographers.js";
+import { displayMedia } from "../factories/pageMainPhotographers.js";
 import { getMedias, getPhotographers } from "../utils/dataHandler.js";
 import { getParamUrl } from "../utils/paramUrl.js";
 
@@ -28,6 +28,8 @@ const init = async () => {
             media = medias[i]
         }
     }
+
+    console.log(medias.id)
     console.log(media)
     displayMedia(media)
 };
