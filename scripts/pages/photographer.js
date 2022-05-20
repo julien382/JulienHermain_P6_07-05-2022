@@ -17,21 +17,36 @@ const init = async () => {
         }
     }
 
-    console.log(photographer)
+    //console.log(photographer)
+    //console.log(DATA.photographers.id)
     displayData(photographer)
 
     let media = null
 
     for(let i=0; i<medias.length; i++){
-        const mediaId = medias[i].id
-        if (mediaId == id) {
+        const photographerId = medias[i].id
+        if (photographerId == id) {
             media = medias[i]
         }
     }
 
-    console.log(medias.id)
-    console.log(media)
-    displayMedia(media)
+    console.log(medias)
+    //console.log(media)
+    //displayMedia(media)
+
+    for(let i=0; i<medias.length; i++){
+        const photographerId = medias[i].id
+        if (photographerId == id) {
+            media = medias[i]
+            console.log(media)
+        }
+    }
+/*
+    for (const idPhotographer in medias) {
+        if (DATA.media.id == id) {
+            console.log()
+        }
+      }*/
 };
 
 

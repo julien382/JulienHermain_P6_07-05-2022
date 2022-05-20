@@ -11,6 +11,7 @@ export const getData = async () => {
 
 export const getPhotographers = async () => {
     const DATA = await getData()
+    //console.log(DATA.photographers.id)
     return DATA.photographers
 }
 
