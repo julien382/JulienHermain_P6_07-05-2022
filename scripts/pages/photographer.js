@@ -1,53 +1,19 @@
 import { displayData } from "../factories/pagePhotographers.js";
-import { displayMedia } from "../factories/pageMainPhotographers.js";
-import { getMedias, getPhotographers } from "../utils/dataHandler.js";
+import { getMedias, getOnePhotographers} from "../utils/dataHandler.js";
 import { getParamUrl } from "../utils/paramUrl.js";
 
 const init = async () => {
     const id = getParamUrl("id")
-    const photographers = await getPhotographers()
-    const medias = await getMedias()
+    const photographer = await getOnePhotographers(id)
+    const medias = await getMedias(id)
+    console.log(medias)
 
-    let photographer = null
-
-    for(let i=0; i<photographers.length; i++){
-        const photographerId = photographers[i].id
-        if (photographerId == id) {
-            photographer = photographers[i]
-        }
-    }
+    
 
     //console.log(photographer)
     //console.log(DATA.photographers.id)
     displayData(photographer)
 
-    let media = null
-
-    for(let i=0; i<medias.length; i++){
-        const photographerId = medias[i].id
-        if (photographerId == id) {
-            media = medias[i]
-        }
-    }
-
-    console.log(medias)
-    //console.log(media)
-    //displayMedia(media)
-
-    for(let i=0; i<medias.length; i++){
-        const photographerId = medias[i].id
-        if (photographerId == id) {
-            media = medias[i]
-            console.log(media)
-        }
-    }
-/*
-    for (const idPhotographer in medias) {
-        if (DATA.media.id == id) {
-            console.log()
-        }
-      }*/
-};
 
 
 
@@ -55,6 +21,5 @@ const init = async () => {
 // récupérer les données
 // récup les données relatives à l'id pour les afficher
 // afficher les data
+}
 init();
-
-    

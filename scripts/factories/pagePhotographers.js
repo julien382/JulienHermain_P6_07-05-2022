@@ -3,12 +3,11 @@ export const indexPhotographerFactory = (data) => {
     // const name = data.name
     // const portrait = data.portrait
     const { name, id, city, country, tagline, price, portrait } = data;
-
     const picture = `assets/photographers/${portrait}`;
 
     const getUserCardDOM = () => {
 
-        const userCardDom = document.createElement( 'article' );
+        const userCardDom = document.createElement( 'section' );
         const div = document.createElement( 'div' );
         const divText = document.createElement( 'div' );
         const img = document.createElement( 'img' );
@@ -42,10 +41,15 @@ export const indexPhotographerFactory = (data) => {
     return { name, id, city, country, tagline, price, portrait, getUserCardDOM }
 }
 
-export const displayData = async (photographer) => {
+export const displayData = (photographer) => {
     const photographersHeader = document.querySelector(".photograph-header");
 
         const photographerModel = indexPhotographerFactory(photographer);
         const userCardDOM = photographerModel.getUserCardDOM();
         photographersHeader.appendChild(userCardDOM);
 };
+/*
+const html = `<div> 
+<p>${url}</p>
+
+</div>`*/

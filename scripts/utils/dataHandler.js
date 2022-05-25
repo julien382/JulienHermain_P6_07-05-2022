@@ -15,7 +15,27 @@ export const getPhotographers = async () => {
     return DATA.photographers
 }
 
-export const getMedias = async () => {
+export const getOnePhotographers = async (id) => {
+    let photographer = null
+
+    const photographers = await getPhotographers()
+
+    for(let i=0; i<photographers.length; i++){
+        const photographerId = photographers[i].id
+        if (photographerId == id) {
+            photographer = photographers[i]
+        }
+    }
+    return photographer
+}
+
+export const getMedias = async (id) => {
     const DATA = await getData()
-    return DATA.media
+    let medias = []
+    DATA.media.forEach((media)=>{
+        if (media.photographerId == id){
+            medias.push(media)
+        }
+    })
+    return medias
 }
