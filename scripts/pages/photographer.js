@@ -1,4 +1,5 @@
 import { displayData } from "../factories/pagePhotographers.js";
+import { displayMedia } from "../factories/pageMainPhotographers.js";
 import { getMedias, getOnePhotographers} from "../utils/dataHandler.js";
 import { getParamUrl } from "../utils/paramUrl.js";
 
@@ -13,7 +14,7 @@ const init = async () => {
     //console.log(photographer)
     //console.log(DATA.photographers.id)
     displayData(photographer)
-    displayData(medias)
+    displayMedia(medias)
 
 
 

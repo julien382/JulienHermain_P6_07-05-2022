@@ -3,8 +3,6 @@ export const indexPhotographerFactory = (data) => {
     // const portrait = data.portrait
     const { date, id, image, likes, photographerId, price, title } = data;
 
-    const picture = `assets/photographers/${portrait}`;
-
     const getUserCardDOM = () => {
 
         const userCardDom = document.createElement( 'div' );
@@ -19,7 +17,6 @@ export const indexPhotographerFactory = (data) => {
 
         //div.setAttribute("class", "img_pp_photographers")
         //divText.setAttribute("class", "text_pp_photographers")
-        img.setAttribute("src", picture)
 
         userCardDom.appendChild(div);
         div.appendChild(img);
@@ -28,7 +25,7 @@ export const indexPhotographerFactory = (data) => {
         return userCardDom;
     }
 
-    return { date, id, image, likes, photographerId, price, title, portrait, getUserCardDOM }
+    return { date, id, image, likes, photographerId, price, title, getUserCardDOM }
 }
 
 export const displayMedia = async (media) => {
