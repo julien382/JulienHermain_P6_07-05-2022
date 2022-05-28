@@ -13,7 +13,7 @@ const init = async () => {
     //console.log(photographer)
     //console.log(DATA.photographers.id)
     displayData(photographer)
-
+    displayData(medias)
 
 
 

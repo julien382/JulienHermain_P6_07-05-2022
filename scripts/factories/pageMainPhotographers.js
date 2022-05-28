@@ -1,7 +1,7 @@
 export const indexPhotographerFactory = (data) => {
     // const name = data.name
     // const portrait = data.portrait
-    const { id, photographerId, title, image, likes, date, price } = data;
+    const { date, id, image, likes, photographerId, price, title } = data;
 
     const picture = `assets/photographers/${portrait}`;
 
@@ -10,7 +10,7 @@ export const indexPhotographerFactory = (data) => {
         const userCardDom = document.createElement( 'div' );
         //const div = document.createElement( 'div' );
         //const divText = document.createElement( 'div' );
-        const image = document.createElement( 'img' );
+        const img = document.createElement( 'img' );
         const title = document.createElement( 'p' );
 
         // on remplie nos balises
@@ -28,7 +28,7 @@ export const indexPhotographerFactory = (data) => {
         return userCardDom;
     }
 
-    return { name, id, city, country, tagline, price, portrait, getUserCardDOM }
+    return { date, id, image, likes, photographerId, price, title, portrait, getUserCardDOM }
 }
 
 export const displayMedia = async (media) => {
