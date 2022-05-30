@@ -1,14 +1,15 @@
 export const indexPhotographerFactory = (data) => {
     // const name = data.name
     // const portrait = data.portrait
-    const { date, id, image, likes, photographerId, price, title, portrait } = data;
-    const picture = `assets/photographers/${portrait}`;
+    const { date, id, image, likes, photographerId, price, title } = data;
+    const picture = `assets/images/Mimi/Travel_HillsideColor.jpg`;
 
     const getUserCardDOM = () => {
 
-        const userCardDom = document.createElement( 'div' );
+        const userCardDom = document.createElement( 'section' );
+
         const trier = document.createElement( 'p' );
-        const div = document.createElement( 'div' );
+        const divImage = document.createElement( 'div' );
         const img = document.createElement( 'img' );
         const title = document.createElement( 'p' );
 
@@ -16,18 +17,19 @@ export const indexPhotographerFactory = (data) => {
         
         userCardDom.setAttribute("class", "photographers")
         trier.textContent = "Trier par";
+        divImage.setAttribute("class", "img_photographers")
         img.setAttribute("src", picture)
 
 
         userCardDom.appendChild(trier);
-        userCardDom.appendChild(div);
-        div.appendChild(img);
+        userCardDom.appendChild(divImage);
+        divImage.appendChild(img);
 
         // on retourne la balise article
         return userCardDom;
     }
 
-    return { date, id, image, likes, photographerId, price, title, portrait, getUserCardDOM }
+    return { date, id, image, likes, photographerId, price, title, getUserCardDOM }
 }
 
 export const displayMedia = async (media) => {

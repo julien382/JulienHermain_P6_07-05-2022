@@ -74,6 +74,7 @@ form input {
     border: none;
     border-radius: 5px;
 }
+/*  header */
 
 .pp_photographers{
     display: flex;
@@ -104,7 +105,24 @@ form input {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/*  main */
 
+.img_photographers{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.img_photographers img{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    max-width: 155%;
+}
 /* lightbox 
 
 .lightbox{
