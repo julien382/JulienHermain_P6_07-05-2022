@@ -8,31 +8,44 @@ export const indexPhotographerFactory = (data) => {
     const getUserCardDOM = () => {
 
         const userCardDom = document.createElement( 'section' );
-        const div = document.createElement( 'div' );
+
         const divText = document.createElement( 'div' );
-        const img = document.createElement( 'img' );
         const h1 = document.createElement( 'h1' );
         const pCity = document.createElement( 'p' );
         const pTagline = document.createElement( 'p' );
+        
+        const button = document.createElement( 'button' );
 
+        const divImage = document.createElement( 'div' );
+        const img = document.createElement( 'img' );
+        
         // on remplie nos balises
         
         userCardDom.setAttribute("class", "pp_photographers")
+
+        divText.setAttribute("class", "text_pp_photographers")
         h1.textContent = name;
         pCity.textContent = city + ", " + country;
         pCity.setAttribute("class", "pCity__pp_photographers")
         pTagline.textContent = tagline;
 
-        div.setAttribute("class", "img_pp_photographers")
-        divText.setAttribute("class", "text_pp_photographers")
+        button.setAttribute("class", "contact_button")
+        button.textContent = "Contactez-moi";
+
+        divImage.setAttribute("class", "img_pp_photographers")
         img.setAttribute("src", picture)
 
-        userCardDom.appendChild(div);
+        //
+
         userCardDom.appendChild(divText);
-        div.appendChild(img);
         divText.appendChild(h1);
         divText.appendChild(pCity);
         divText.appendChild(pTagline);
+        
+        userCardDom.appendChild(button)
+        
+        userCardDom.appendChild(divImage);
+        divImage.appendChild(img);
 
         // on retourne la balise article
         return userCardDom;

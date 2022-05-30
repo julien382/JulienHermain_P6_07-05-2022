@@ -1,23 +1,25 @@
 export const indexPhotographerFactory = (data) => {
     // const name = data.name
     // const portrait = data.portrait
-    const { date, id, image, likes, photographerId, price, title } = data;
+    const { date, id, image, likes, photographerId, price, title, portrait } = data;
+    const picture = `assets/photographers/${portrait}`;
 
     const getUserCardDOM = () => {
 
         const userCardDom = document.createElement( 'div' );
-        //const div = document.createElement( 'div' );
-        //const divText = document.createElement( 'div' );
+        const trier = document.createElement( 'p' );
+        const div = document.createElement( 'div' );
         const img = document.createElement( 'img' );
         const title = document.createElement( 'p' );
 
         // on remplie nos balises
         
         userCardDom.setAttribute("class", "photographers")
+        trier.textContent = "Trier par";
+        img.setAttribute("src", picture)
 
-        //div.setAttribute("class", "img_pp_photographers")
-        //divText.setAttribute("class", "text_pp_photographers")
 
+        userCardDom.appendChild(trier);
         userCardDom.appendChild(div);
         div.appendChild(img);
 
@@ -25,7 +27,7 @@ export const indexPhotographerFactory = (data) => {
         return userCardDom;
     }
 
-    return { date, id, image, likes, photographerId, price, title, getUserCardDOM }
+    return { date, id, image, likes, photographerId, price, title, portrait, getUserCardDOM }
 }
 
 export const displayMedia = async (media) => {
