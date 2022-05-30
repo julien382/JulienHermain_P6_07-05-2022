@@ -123,7 +123,7 @@ form input {
 
     max-width: 155%;
 }
-/* lightbox 
+/* lightbox */
 
 .lightbox{
     position: fixed;
@@ -136,5 +136,35 @@ form input {
 
 .lightbox__next, 
 .lightbox__prev{
-    
-}*/
+    border:none;
+    background: url(../assets/icons/arrow.svg) center center / 100% 100%;
+    width: 30px;
+    height: 48px;
+    position: fixed;
+    top: 50%;
+    right: 34px;
+    margin-top: -14px;
+    z-index: 11;
+    text-indent: -3000px;
+    cursor: pointer;
+}
+
+.lightbox__prev{
+    right: auto;
+    left: 34px;
+    transform: rotate(180deg);
+}
+
+.lightbox__close{
+    border:none;
+    background: url(../assets/icons/close.svg) center center / 100% 100%;
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 11;
+    text-indent: -3000px;
+    cursor: pointer;
+
+}
