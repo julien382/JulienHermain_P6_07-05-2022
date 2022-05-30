@@ -132,6 +132,7 @@ form input {
     width: 100%;
     height: 100%;
     z-index: 10;
+    overflow: auto;
 }
 
 .lightbox__next, 
@@ -166,5 +167,16 @@ form input {
     z-index: 11;
     text-indent: -3000px;
     cursor: pointer;
-
+}
+.lightbox__container img{
+    max-width: 100%;
+    height: auto;
+}
+.lightbox__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 86px;
+    margin-right: 86px;
+    min-height: 100vh;
 }
