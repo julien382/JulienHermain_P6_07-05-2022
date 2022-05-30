@@ -133,6 +133,7 @@ form input {
     height: 100%;
     z-index: 10;
     overflow: auto;
+    animation: lightboxIn .5s;
 }
 
 .lightbox__next, 
@@ -171,6 +172,7 @@ form input {
 .lightbox__container img{
     max-width: 100%;
     height: auto;
+    animation: lightboxIn .5s;
 }
 .lightbox__container{
     display: flex;
@@ -179,4 +181,9 @@ form input {
     margin-left: 86px;
     margin-right: 86px;
     min-height: 100vh;
+}
+
+@keyframes lightboxIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
