@@ -239,14 +239,6 @@ form input {
     justify-content: center;
 }
 
-.lightbox__container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color:yellow;
-    height: 100%;
-}
 
 .lightbox__next, 
 .lightbox__prev{
@@ -280,9 +272,19 @@ form input {
     cursor: pointer;
 }
 
+.lightbox__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:yellow;
+    height: 100%;
+    width: 50%;
+}
+
 .lightbox_image{
-    height: 400px;
-    width: 200px;
+    height: 90%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -290,14 +292,14 @@ form input {
 .lightbox_image img{
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
-
-    max-width: 155%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .lightbox_text{
-    display: flex;
+    height: 10%;
     width: 100%;
 }
 
