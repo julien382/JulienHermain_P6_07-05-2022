@@ -249,7 +249,22 @@ form input {
 
 .lightbox__next, 
 .lightbox__prev{
+    position: absolute;
+    border:none;
+    background: url(../assets/icons/arrow.svg) center center / 100% 100%;
+    width: 30px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    right: 34px;
+    z-index: 11;
+    cursor: pointer;
+}
 
+.lightbox__prev{
+    right: auto;
+    left: 34px;
+    transform: rotate(180deg);
 }
 
 .lightbox__close{
