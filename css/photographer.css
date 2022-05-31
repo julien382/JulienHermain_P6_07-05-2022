@@ -270,15 +270,26 @@ form input {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-height: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
-.lightbox__container img{
-    max-height: 70%;
+.lightbox_image{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+.lightbox_image img{
+    position: absolute;
+    max-height: 100%;
     animation: lightboxIn .5s;
+}
+
+.title_image{
+    color: #901C1C;
 }
 
 @keyframes lightboxIn {
@@ -286,9 +297,6 @@ form input {
     to {opacity: 1;}
 }
 
-.title_image{
-    color: #901C1C;
-}
 /*
 .lightbox{
     position: fixed;
