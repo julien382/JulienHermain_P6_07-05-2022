@@ -245,6 +245,7 @@ form input {
     justify-content: center;
     flex-direction: column;
     background-color:yellow;
+    height: 100%;
 }
 
 .lightbox__next, 
@@ -280,7 +281,7 @@ form input {
 }
 
 .lightbox_image{
-    height: 200px;
+    height: 400px;
     width: 200px;
     overflow: hidden;
     position: relative;
@@ -297,11 +298,9 @@ form input {
 
 .lightbox_text{
     display: flex;
-    background-color: blue;
     width: 100%;
 }
 
 .title_image{
     color: #901C1C;
-    background-color: aqua;
 }
