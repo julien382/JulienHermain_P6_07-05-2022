@@ -187,6 +187,7 @@ form input {
     flex-direction: column;
     background-color:yellow;
     height: 100%;
+    width: 80%;
 }
 
 .lightbox_image{
