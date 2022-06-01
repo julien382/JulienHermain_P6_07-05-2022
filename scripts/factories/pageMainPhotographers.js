@@ -1,41 +1,33 @@
-export const indexPhotographerFactory = (data) => {
-    // const name = data.name
-    // const portrait = data.portrait
-    const { date, id, image, likes, photographerId, price, title } = data;
-    const picture = `assets/images/Mimi/Travel_HillsideColor.jpg`;
+export const displayMedia = async (medias, photographerName) => {
+    const pictures = document.querySelector(".pictures");
 
-    const getUserCardDOM = () => {
+    // Mimi keel ==> Mimi
+    const cutName = photographerName.split(' ')[0] // Ellie-Rose
 
-        const userCardDom = document.createElement( 'section' );
+    medias.forEach(media => {
+        const path = '../../assets/images/' + cutName + '/' + media.image
 
-        const trier = document.createElement( 'p' );
-        const divImage = document.createElement( 'div' );
-        const img = document.createElement( 'img' );
-        const title = document.createElement( 'p' );
+        const card = createCard(path)
+        pictures.append(card)
+    });
 
-        // on remplie nos balises
-        
-        userCardDom.setAttribute("class", "photographers")
-        trier.textContent = "Trier par";
-        divImage.setAttribute("class", "img_photographers")
-        img.setAttribute("src", picture)
+};
+/*
+const createCard = (path) => {
+    const card = document.createElement('div')
+    card.classList.add('card')*/
 
+    // regex .mp4 ?
 
-        userCardDom.appendChild(trier);
-        userCardDom.appendChild(divImage);
-        divImage.appendChild(img);
-
-        // on retourne la balise article
-        return userCardDom;
+   /* if (*//* image ou video ?  *//*) {
+        const img = document.createElement('img')
+        img.src = path
+        card.append(img)
+    } else {
+        const video = document.createElement('video')
+        img.video = path
+        card.append(video)
     }
 
-    return { date, id, image, likes, photographerId, price, title, getUserCardDOM }
-}
-
-export const displayMedia = async (media) => {
-    const photographersMain = document.querySelector(".photograph-main");
-
-        const photographerMainModel = indexPhotographerFactory(media);
-        const userCardDOM = photographerMainModel.getUserCardDOM();
-        photographersMain.appendChild(userCardDOM);
-};
+    return card
+};*/
