@@ -12,22 +12,25 @@ export const displayMedia = async (medias, photographerName) => {
     });
 
 };
-/*
+
 const createCard = (path) => {
     const card = document.createElement('div')
-    card.classList.add('card')*/
-
+    card.classList.add('card')
+console.log(path)
     // regex .mp4 ?
 
-   /* if (*//* image ou video ?  *//*) {
+    /*const mp4Regex = /^\w+.(mp4)$/ // regex .mp4
+
+    if ( path = mp4Regex*//* image ou video ?  *//*) {*/
         const img = document.createElement('img')
+        img.setAttribute("class", "imagesQuadrillage")
         img.src = path
         card.append(img)
-    } else {
-        const video = document.createElement('video')
-        img.video = path
+    /*} else {
+        const video = document.createElement('source')
+        video.src = path
         card.append(video)
-    }
+    }*/
 
     return card
-};*/
+};

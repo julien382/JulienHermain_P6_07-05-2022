@@ -123,6 +123,29 @@ form input {
 
     max-width: 155%;
 }
+
+.pictures{
+    
+}
+
+.imagesQuadrillage{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    margin-right: 25px;
+}
+
+.imagesQuadrillage img{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    max-width: 100%;
+}
+
 /* lightbox */
 
 .lightbox{
