@@ -25,6 +25,7 @@ export const indexPhotographerFactory = (data) => {
 
         divText.setAttribute("class", "text_pp_photographers")
         h1.textContent = name;
+        h1.setAttribute("class", "name_pp_photographers")
         pCity.textContent = city + ", " + country;
         pCity.setAttribute("class", "pCity__pp_photographers")
         pTagline.textContent = tagline;

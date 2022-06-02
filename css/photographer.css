@@ -79,7 +79,9 @@ form input {
 .pp_photographers{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .img_pp_photographers{
@@ -98,6 +100,12 @@ form input {
     transform: translate(-50%, -50%);
 
     max-width: 155%;
+}
+
+.name_pp_photographers{
+    color: #D3573C;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .pCity__pp_photographers{
