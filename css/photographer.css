@@ -4,10 +4,6 @@ main{
     padding-right: 80px;
 }
 
-#contact_modal {
-    display: none;
-}
-
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -27,6 +23,12 @@ main{
     cursor: pointer;
 }
 
+/* modal formulaire */
+
+#contact_modal {
+    display: none;
+}
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
@@ -37,22 +39,43 @@ main{
     justify-content: space-between;
     padding: 35px;
     margin: auto;
+    position: fixed;
+    top: 5%;
+    left: 25%;
 }
 
-.modal header {
+/* header formulaire */
+
+.contactHeader{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
 }
 
-.modal header img {
+.contactHeader img{
     cursor: pointer;
 }
-
-.modal header h2 {
+/*
+.name_photographer_section{
+    
+}
+*/
+.contactezMoi{
     font-size: 64px;
     font-weight: normal;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+.name__pp_photographers{
+    font-size: 64px;
+    margin: 0;
+}
+
+/* formulaire */
 
 form {
     display: flex;
@@ -80,6 +103,8 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+
 /*  header */
 
 .pp_photographers{

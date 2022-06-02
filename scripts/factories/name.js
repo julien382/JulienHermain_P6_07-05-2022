@@ -11,6 +11,7 @@ export const Factory = (data) => {
         const pName = document.createElement( 'p' );
    
         h2Contact.textContent = "Contactez-moi";
+        h2Contact.setAttribute("class", "contactezMoi")
         pName.setAttribute("class", "name__pp_photographers")
         pName.textContent = name;
         
