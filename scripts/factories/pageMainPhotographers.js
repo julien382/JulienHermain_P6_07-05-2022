@@ -6,7 +6,6 @@ export const displayMedia = async (medias, photographerName) => {
 
     medias.forEach(media => {
         const path = '../../assets/images/' + cutName + '/' + media.image
-
         const card = createCard(path)
         pictures.append(card)
     });
@@ -16,7 +15,6 @@ export const displayMedia = async (medias, photographerName) => {
 const createCard = (path) => {
     const card = document.createElement('div')
     card.classList.add('card')
-console.log(path)
     // regex .mp4 ?
 
     /*const mp4Regex = /^\w+.(mp4)$/*/ // regex .mp4
@@ -35,3 +33,26 @@ console.log(path)
 
     return card
 };
+
+/////////////////**/
+/*
+export const displayMediaName = async (photographerName) => {
+    const name = document.querySelector(".name_photographer_section");
+console.log(photographerName)
+    name.append(card)
+    // Mimi keel ==> Mimi
+
+    
+    //const card = createName(photographerName)
+    //pictures.append(card)
+    
+};
+
+const createName = (path) => {
+    const card = document.createElement('div')
+    card.classList.add('p')
+
+    card.append(p)
+
+    return card
+};*/
