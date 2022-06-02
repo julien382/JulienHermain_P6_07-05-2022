@@ -1,3 +1,9 @@
+main{
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
 #contact_modal {
     display: none;
 }
@@ -113,31 +119,9 @@ form input {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/*  main */
 
-.img_photographers{
-    height: 200px;
-    width: 200px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 25px;
-}
 
-.img_photographers img{
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-
-    max-width: 155%;
-}
-
-main{
-    background-color: yellow;
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 80px;
-}
+/* pictures */ 
 
 .pictures{
     display: flex;
@@ -147,7 +131,6 @@ main{
     width: 100%;
     height: 100%;
     margin: auto;
-    background-color: aqua;
 }
 
 .card{
@@ -158,7 +141,6 @@ main{
     margin-bottom: 71px;
     margin-left: 47px;
     margin-right: 47px;
-    background-color: green;
 }
 
 .card img{
