@@ -179,6 +179,10 @@ form input {
 
 /* lightbox */
 
+#lightbox_modal {
+    display: none;
+}
+
 .lightbox{
     position: fixed;
     top: 0;
