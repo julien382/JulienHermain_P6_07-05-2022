@@ -21,17 +21,27 @@ class Lightbox{
 
     static init () {
         const links = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]')
-            .forEach(link => link.addEventListener('click', e =>
-            {
+            .forEach(link => link.addEventListener('click', e => {
                 e.preventDefault()
                 new Lightbox(e.currentTarget.getAttribute('href'))
             }))
     }
 
+    /**
+     * 
+     * @param {string} url URL de l'image
+     */
+
     constructor (url){
         const element = this.buildDOM(url)
         document.body.appendChild(element)
     }
+
+    /**
+     * 
+     * @param {string} url URL de l'image 
+     * @return {HTMLElement} 
+     */
 
     buildDOM(url){
       const dom = document.createElement('div')
@@ -43,7 +53,7 @@ class Lightbox{
             <button class="lightbox__next"></button>
             <button class="lightbox__prev"></button>
             <div class="lightbox_image">
-              <img  src="/assets/photographers/MimiKeel.jpg" alt="">
+              <img  src="${url}" alt="">
             </div>
             <div class="lightbox_text">
               <p class="title_image">Arc-en-ciel</p>
