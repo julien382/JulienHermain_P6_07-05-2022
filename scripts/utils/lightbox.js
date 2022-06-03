@@ -1,22 +1,3 @@
-/*export const formHandler = () => {
-    const lightbox_modalBtn = document.querySelectorAll(".contact_button");
-    const lightbox_cross = document.querySelector(".lightbox_close");
-    
-    const lightbox_launchModal = () => {
-        lightbox_modal.style.display = "block";
-    }
-    
-    const lightbox_closeModal = () => {
-        lightbox_modal.style.display = "none";
-    }
-    
-    
-    lightbox_modalBtn.forEach((btn) => {
-        btn.addEventListener("click", lightbox_launchModal)
-    });
-    lightbox_cross.addEventListener("click", lightbox_closeModal);
-}*/
-
 class Lightbox{
 
     static init () {
@@ -63,7 +44,7 @@ class Lightbox{
       return dom
     }
 }
-
+Lightbox.init()
 /*
 <div id="lightbox_modal" class="lightbox">
       <div class="lightbox__container_all">
@@ -81,4 +62,3 @@ class Lightbox{
       </div>
     </div>
     */
-Lightbox.init()
