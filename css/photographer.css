@@ -180,7 +180,7 @@ form input {
 /* lightbox */
 
 #lightbox_modal {
-    display: none;
+    display: block;
 }
 
 .lightbox{

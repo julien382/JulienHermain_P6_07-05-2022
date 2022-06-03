@@ -8,6 +8,7 @@ export const displayMedia = async (medias, photographerName) => {
         const path = '../../assets/images/' + cutName + '/' + media.image
         const card = createCard(path)
         pictures.append(card)
+        console.log(path)
     });
 
 };
@@ -20,10 +21,13 @@ const createCard = (path) => {
     /*const mp4Regex = /^\w+.(mp4)$/*/ // regex .mp4
 
     /*if ( path = mp4Regex*//* image ou video ?  *//*) {*/
+        const a = document.createElement('a')
         const img = document.createElement('img')
+        a.setAttribute("href", path)
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
-        card.append(img)
+        card.append(a)
+        a.append(img)
     /*} else {
         const video = document.createElement('source')
         video.setAttribute("class", "imagesQuadrillage")
