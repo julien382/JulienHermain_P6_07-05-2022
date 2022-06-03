@@ -8,7 +8,6 @@ export const displayMedia = async (medias, photographerName) => {
         const path = '../../assets/images/' + cutName + '/' + media.image
         const card = createCard(path)
         pictures.append(card)
-        console.log(path)
     });
 
 };
