@@ -14,6 +14,7 @@ export const displayMedia = async (medias, photographerName) => {
 
 const createCard = (path) => {
     const card = document.createElement('div')
+    const elementTitle = media.title
     card.classList.add('card')
     // regex .mp4 ?
 
@@ -22,11 +23,14 @@ const createCard = (path) => {
     /*if ( path = mp4Regex*//* image ou video ?  *//*) {*/
         const a = document.createElement('a')
         const img = document.createElement('img')
+        const title = createCard(elementTitle)
+
         a.setAttribute("href", path)
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
         card.append(a)
         a.append(img)
+        pictures.append(title)
     /*} else {
         const video = document.createElement('source')
         video.setAttribute("class", "imagesQuadrillage")
