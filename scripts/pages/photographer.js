@@ -25,5 +25,7 @@ const init = async () => {
             new Lightbox(event.currentTarget.getAttribute('href'))
         })
     })
+
+    
 }
 init();

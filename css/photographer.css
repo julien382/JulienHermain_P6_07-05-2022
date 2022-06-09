@@ -219,6 +219,11 @@ form input {
     justify-content: center;
     animation: lightboxIn .5s;
     background-color: #000000ab;
+    transition: opacity .3s;
+}
+
+.lightbox.fadeOut{
+    opacity: 0;
 }
 
 .lightbox__container_all{
@@ -301,4 +306,15 @@ form input {
 @keyframes lightboxIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+.compteur{
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    width: 400px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:#DB8876;
 }

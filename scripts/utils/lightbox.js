@@ -9,11 +9,15 @@ export class Lightbox {
     document.body.appendChild(element)
   }
 
-  /**
-   * 
-   * @param {string} url URL de l'image 
-   * @return {HTMLElement} 
-   */
+  // ferme la lightbox
+  close(e) {
+    e.preventDefault()
+    this.element.classList.add('fadeOut')
+    window.setTimeout(() => {
+      this.element.parentElement.removeChild(this.element)
+    }, 500)
+  }
+
   buildDOM(url) {
     // regex .mp4 ?
     // const mp4Regex = /^\w+.(mp4)$/ ==> regex .mp4
@@ -33,6 +37,7 @@ export class Lightbox {
           </div>
       </div>
     </div>`
+    dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this))
     return dom
   }
 }
