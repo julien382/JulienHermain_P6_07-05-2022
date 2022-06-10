@@ -36,9 +36,10 @@ const createCard = (path, media) => {
         a.classList.add('linkLightbox'); 
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
+        title.setAttribute("class", "titleImage")
         card.append(a)
         a.append(img)
-        a.append(title)
+        card.append(title)
     } else {
         const video = document.createElement('video')
         video.controls = true
@@ -46,6 +47,7 @@ const createCard = (path, media) => {
         video.src = path
         const title = document.createElement('h2')
         title.innerText = media.title
+        title.setAttribute("class", "titleImage")
         card.append(video)
         card.append(title)
     }

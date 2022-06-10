@@ -183,23 +183,33 @@ form input {
 }
 
 .card{
+}
+
+.imagesQuadrillage{
+    position: relative;
     height: 300px;
     width: 350px;
     overflow: hidden;
-    position: relative;
-    margin-bottom: 71px;
+    /*margin-bottom: 71px;*/
     margin-left: 47px;
     margin-right: 47px;
     border-radius: 5px;
 }
-
-.card img{
+.imagesQuadrillage img{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     max-width: 130%;
+}
+
+.titleImage{
+    font-size: 24px;
+    margin-left: 47px;
+    margin-top: 0;
+    text-decoration: none;
+    color: #901C1C;
 }
 
 /* lightbox */
