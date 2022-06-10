@@ -1,11 +1,13 @@
 export const displayMediaLike = async (medias) => {
+    const tLike = document.querySelector(".compteur");
 
     let totalLike = 0
 
     medias.forEach(media => {
         totalLike += media.likes
 
-        const card = createCard(media)
+        const card = createCard()
+        tLike.append(card)
     });
     console.log(totalLike);
 };
@@ -16,7 +18,7 @@ const createCard = (media, totalLike) => {
     card.classList.add('card')
     console.log(totalLike);
     const pLike = document.createElement('p')
-    pLike.innerText = "totalLike"
+    pLike.innerText = totalLike
     card.append(pLike)
     
     return card
