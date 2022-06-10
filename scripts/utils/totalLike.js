@@ -11,7 +11,6 @@ export const displayMediaLike = async (medias) => {
 };
 
 const createCard = (media, totalLike) => {
-    const mp4Regex = /\.mp4$/
 
     const card = document.createElement('div');
     card.classList.add('card')
