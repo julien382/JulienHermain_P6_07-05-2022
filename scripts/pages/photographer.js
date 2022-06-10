@@ -1,5 +1,6 @@
 import { displayData} from "../factories/pagePhotographers.js";
 import { displayMedia } from "../factories/pageMainPhotographers.js";
+import { displayMediaLike } from "../utils/totalLike.js";
 import { getMedias, getOnePhotographers} from "../utils/dataHandler.js";
 import { getParamUrl } from "../utils/paramUrl.js";
 import { formHandler } from "../utils/contactForm.js";
@@ -14,6 +15,7 @@ const init = async () => {
     displayData(photographer)
     displayMedia(medias, photographer.name)
     displayDataName(photographer)
+    displayMediaLike(medias)
 
     formHandler()
 
