@@ -312,9 +312,19 @@ form input {
     position: fixed;
     bottom: 0;
     right: 2%;
-    width: 400px;
     height: 50px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color:#DB8876;
+}
+
+.pNumberLike{
+    margin-right: 40px;
+}
+
+.totalPriceMonth{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
 }
