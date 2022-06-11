@@ -229,7 +229,7 @@ form input {
     margin-top: 9px;
     margin-left: 10px;
     margin-right: 10px;
-    right: 0;
+    color: #901C1C;
 }
 
 .heartImage{
@@ -361,7 +361,7 @@ form input {
 }*/
 
 .heartTLike{
-    background: url(../assets/icons/heart.svg) center center / 100% 100%;
+    background: url(../assets/icons/heartLikeTotal.svg) center center / 100% 100%;
     width: 17.5px;
     height: 18.35px;
     margin-top: auto;
