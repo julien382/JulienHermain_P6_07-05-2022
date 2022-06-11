@@ -1,15 +1,11 @@
 export const displayMedia = async (medias, photographerName) => {
     const pictures = document.querySelector(".pictures");
 
-
-    //var re = /\s*(-|$)\s*/;
-    // Mimi keel ==> Mimi
-    //const cutName = photographerName.split(' ')[0] // Ellie-Rose
     const cutName = photographerName.split("-").join(" ");
     const cutName1 = cutName.split(" ")[0];
     const cutName2 = cutName.split(" ")[1];
     const cutNameT = cutName1 + " " + cutName2;
-console.log(cutNameT);
+
     let totalLike = 0
 
     medias.forEach(media => {
