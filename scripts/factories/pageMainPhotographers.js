@@ -29,17 +29,23 @@ const createCard = (path, media) => {
     if (!mp4Regex.test(path)) {
         const a = document.createElement('a')
         const img = document.createElement('img')
+        const divText = document.createElement('div')
         const title = document.createElement('h2')
+        const heart = document.createElement('img')
         title.innerText = media.title
 
         a.setAttribute("href", path)
         a.classList.add('linkLightbox'); 
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
+        divText.setAttribute("class", "divTextImage")
         title.setAttribute("class", "titleImage")
+        heart.setAttribute("class", "heartImage")
         card.append(a)
         a.append(img)
-        card.append(title)
+        card.append(divText)
+        divText.append(title)
+        divText.append(heart)
     } else {
         const video = document.createElement('video')
         video.controls = true

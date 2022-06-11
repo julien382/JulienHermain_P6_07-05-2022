@@ -22,8 +22,7 @@ const createCard = (media, totalLike) => {
     pLike.innerText = totalLike
     card.append(pLike)
     const heart = document.createElement('img')
-    heart.setAttribute("class", "heart")
-    //heart.setAttribute("src", "heart.svg")
+    heart.setAttribute("class", "heartTLike")
     card.append(heart)
     //const priceMonth = document.createElement('p')
     //priceMonth.innerText = photographers.name.price

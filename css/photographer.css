@@ -182,8 +182,9 @@ form input {
     height: 100%;
 }
 
-.card{
-}
+/*.card{
+
+}*/
 
 .imagesQuadrillage{
     position: relative;
@@ -204,12 +205,26 @@ form input {
     max-width: 130%;
 }
 
+.divTextImage{
+    display: flex;
+    justify-content: space-between;
+}
+
 .titleImage{
     font-size: 24px;
     margin-left: 47px;
     margin-top: 0;
     text-decoration: none;
     color: #901C1C;
+}
+
+.heartImage{
+    background: url(../assets/icons/heart.svg) center center / 100% 100%;
+    width: 17.5px;
+    height: 18.35px;
+    margin-bottom: 16px;
+    margin-right: 47px;
+    margin-top: 10px;
 }
 
 /* lightbox */
@@ -332,7 +347,7 @@ form input {
     
 }*/
 
-.heart{
+.heartTLike{
     background: url(../assets/icons/heart.svg) center center / 100% 100%;
     width: 17.5px;
     height: 18.35px;
