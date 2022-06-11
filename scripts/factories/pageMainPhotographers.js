@@ -19,7 +19,6 @@ export const displayMedia = async (medias, photographerName) => {
         pictures.append(card)
     });
 
-    console.log(totalLike);
 };
 
 const createCard = (path, media) => {
