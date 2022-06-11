@@ -28,34 +28,45 @@ const createCard = (path, media) => {
 
     if (!mp4Regex.test(path)) {
         const a = document.createElement('a')
-        const img = document.createElement('img')
-        const divText = document.createElement('div')
-        const title = document.createElement('h2')
-        const heart = document.createElement('img')
-        title.innerText = media.title
-
         a.setAttribute("href", path)
         a.classList.add('linkLightbox'); 
+        const img = document.createElement('img')
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
+        const divText = document.createElement('div')
         divText.setAttribute("class", "divTextImage")
+        const title = document.createElement('h2')
         title.setAttribute("class", "titleImage")
+        title.innerText = media.title
+        const heart = document.createElement('img')
         heart.setAttribute("class", "heartImage")
+
         card.append(a)
         a.append(img)
         card.append(divText)
         divText.append(title)
         divText.append(heart)
     } else {
+        const a = document.createElement('a')
+        a.setAttribute("href", path)
+        a.classList.add('linkLightbox');
         const video = document.createElement('video')
         video.controls = true
         video.setAttribute("class", "imagesQuadrillage")
         video.src = path
+        const divText = document.createElement('div')
+        divText.setAttribute("class", "divTextImage")
         const title = document.createElement('h2')
-        title.innerText = media.title
         title.setAttribute("class", "titleImage")
-        card.append(video)
-        card.append(title)
+        title.innerText = media.title
+        const heart = document.createElement('img')
+        heart.setAttribute("class", "heartImage")
+
+        card.append(a)
+        a.append(video)
+        card.append(divText)
+        divText.append(title)
+        divText.append(heart)
     }
 
     return card
