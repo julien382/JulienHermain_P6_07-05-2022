@@ -1,9 +1,15 @@
 export const displayMedia = async (medias, photographerName) => {
     const pictures = document.querySelector(".pictures");
 
-    // Mimi keel ==> Mimi
-    const cutName = photographerName.split(' ')[0] // Ellie-Rose
 
+    //var re = /\s*(-|$)\s*/;
+    // Mimi keel ==> Mimi
+    //const cutName = photographerName.split(' ')[0] // Ellie-Rose
+    const cutName = photographerName.split("-").join(" ");
+    const cutName1 = cutName.split(" ")[0];
+    const cutName2 = cutName.split(" ")[1];
+    const cutNameT = cutName1 + " " + cutName2;
+console.log(cutNameT);
     let totalLike = 0
 
     medias.forEach(media => {
@@ -12,7 +18,7 @@ export const displayMedia = async (medias, photographerName) => {
         const mediaPath = media.image ? media.image : media.video
         // const mediaPath = media.image ?? media.video
 
-        const path = '../../assets/images/' + cutName + '/' + mediaPath
+        const path = '../../assets/images/' + cutNameT + '/' + mediaPath
         const card = createCard(path, media)
         pictures.append(card)
     });
