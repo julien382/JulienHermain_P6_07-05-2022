@@ -45,6 +45,9 @@ const createCard = (path, media) => {
         const title = document.createElement('h2')
         title.setAttribute("class", "titleImage")
         title.innerText = media.title
+        const nLikes = document.createElement('p')
+        nLikes.setAttribute("class", "nombreLikes")
+        nLikes.innerText = media.likes
         const heart = document.createElement('img')
         heart.setAttribute("class", "heartImage")
 
@@ -52,6 +55,7 @@ const createCard = (path, media) => {
         a.append(img)
         card.append(divText)
         divText.append(title)
+        divText.append(nLikes)
         divText.append(heart)
     } else {
         const a = document.createElement('a')
@@ -66,6 +70,9 @@ const createCard = (path, media) => {
         const title = document.createElement('h2')
         title.setAttribute("class", "titleImage")
         title.innerText = media.title
+        const nLikes = document.createElement('p')
+        nLikes.setAttribute("class", "nombreLikes")
+        nLikes.innerText = media.likes
         const heart = document.createElement('img')
         heart.setAttribute("class", "heartImage")
 
@@ -73,6 +80,7 @@ const createCard = (path, media) => {
         a.append(video)
         card.append(divText)
         divText.append(title)
+        divText.append(nLikes)
         divText.append(heart)
     }
 

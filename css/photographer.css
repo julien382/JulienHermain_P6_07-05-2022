@@ -219,6 +219,11 @@ form input {
     color: #901C1C;
 }
 
+.nombreLikes{
+    margin-top: 10px;
+    right: 0;
+}
+
 .heartImage{
     background: url(../assets/icons/heart.svg) center center / 100% 100%;
     width: 17.5px;
