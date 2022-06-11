@@ -209,11 +209,13 @@ form input {
 .divTextImage{
     display: flex;
     justify-content: space-between;
+    margin-left: 47px;
+    /*margin-right: 47px;*/
+    width: 78%;
 }
 
 .titleImage{
     font-size: 24px;
-    margin-left: 47px;
     margin-top: 0;
     text-decoration: none;
     color: #901C1C;
@@ -235,7 +237,6 @@ form input {
     width: 17.5px;
     height: 18.35px;
     margin-bottom: 16px;
-    margin-right: 47px;
     margin-top: 10px;
 }
 
