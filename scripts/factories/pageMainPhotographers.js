@@ -45,6 +45,8 @@ const createCard = (path, media) => {
         const title = document.createElement('h2')
         title.setAttribute("class", "titleImage")
         title.innerText = media.title
+        const divLikes = document.createElement('div')
+        divLikes.setAttribute("class", "divLikes")
         const nLikes = document.createElement('p')
         nLikes.setAttribute("class", "nombreLikes")
         nLikes.innerText = media.likes
@@ -55,8 +57,9 @@ const createCard = (path, media) => {
         a.append(img)
         card.append(divText)
         divText.append(title)
-        divText.append(nLikes)
-        divText.append(heart)
+        divText.append(divLikes)
+        divLikes.append(nLikes)
+        divLikes.append(heart)
     } else {
         const a = document.createElement('a')
         a.setAttribute("href", path)

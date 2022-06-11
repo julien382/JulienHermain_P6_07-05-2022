@@ -219,8 +219,14 @@ form input {
     color: #901C1C;
 }
 
+.divLikes{
+    display: flex;
+}
+
 .nombreLikes{
-    margin-top: 10px;
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-right: 10px;
     right: 0;
 }
 
