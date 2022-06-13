@@ -10,6 +10,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 h1 {
@@ -21,6 +23,11 @@ h1 {
 .logo {
     height: 50px;
     margin-left: 100px;
+    margin-top: 80px;
+}
+
+header > h1{
+    margin-top: 80px;
 }
 
 .photographer_section {

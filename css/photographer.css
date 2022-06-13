@@ -10,6 +10,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 h1 {
@@ -27,13 +29,14 @@ main{
 .logo {
     height: 50px;
     margin-left: 100px;
+    margin-top: 80px;
 }
-
+/*
 .photograph-header {
     background-color: #FAFAFA;
     height: 250px;
     margin: 0 100px;
-}
+}*/
 
 /* modal formulaire */
 
@@ -127,6 +130,7 @@ form input {
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 150px;
 }
 
 /*  header */
@@ -135,8 +139,10 @@ form input {
     display: flex;
     align-items: center;
     justify-content:space-between;
-    max-width: 1500px;
+    max-width: 1600px;
     margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .img_pp_photographers{
@@ -146,7 +152,7 @@ form input {
     overflow: hidden;
     position: relative;
     margin-bottom: 25px;
-    margin-right: 150px;
+    margin-right: 200px;
 }
 
 .img_pp_photographers img{
@@ -162,12 +168,15 @@ form input {
     color: #D3573C;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 64px;
+    font-weight: 400;
 }
 
 .pCity__pp_photographers{
     color: #901C1C;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 24px;
 }
 
 
@@ -405,7 +414,7 @@ form input {
 /* tri */
 
 .tri{
-    margin-left: 110px;
+    margin-left: 100px;
     font-weight: bold;
     display: flex;
 }
