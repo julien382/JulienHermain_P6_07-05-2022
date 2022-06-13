@@ -186,7 +186,7 @@ form input {
 
 }*/
 
-.imagesQuadrillage{
+.divImage{
     position: relative;
     height: 300px;
     width: 350px;
@@ -197,13 +197,14 @@ form input {
     margin-top: 25px;
     border-radius: 5px;
 }
-.imagesQuadrillage img{
+.divImage img{
     position: absolute;
+    min-height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    max-width: 130%;
+    max-width: 100%;
 }
 
 .divTextImage{

@@ -37,6 +37,8 @@ const createCard = (path, media) => {
         const a = document.createElement('a')
         a.setAttribute("href", path)
         a.classList.add('linkLightbox'); 
+        const divImage = document.createElement('div')
+        divImage.setAttribute("class", "divImage")
         const img = document.createElement('img')
         img.setAttribute("class", "imagesQuadrillage")
         img.src = path
@@ -54,7 +56,8 @@ const createCard = (path, media) => {
         heart.setAttribute("class", "heartImage")
 
         card.append(a)
-        a.append(img)
+        card.append(divImage)
+        divImage.append(img)
         card.append(divText)
         divText.append(title)
         divText.append(divLikes)
@@ -64,6 +67,8 @@ const createCard = (path, media) => {
         const a = document.createElement('a')
         a.setAttribute("href", path)
         a.classList.add('linkLightbox');
+        const divImage = document.createElement('div')
+        divImage.setAttribute("class", "divImage")
         const video = document.createElement('video')
         video.controls = true
         video.setAttribute("class", "imagesQuadrillage")
@@ -82,7 +87,8 @@ const createCard = (path, media) => {
         heart.setAttribute("class", "heartImage")
 
         card.append(a)
-        a.append(video)
+        a.append(divImage)
+        divImage.append(video)
         card.append(divText)
         divText.append(title)
         divText.append(divLikes)
