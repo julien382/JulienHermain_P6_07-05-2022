@@ -197,7 +197,30 @@ form input {
     margin-top: 25px;
     border-radius: 5px;
 }
+
 .divImage img{
+    position: absolute;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 100%;
+}
+
+.divVideo{
+    position: relative;
+    height: 300px;
+    width: 350px;
+    overflow: hidden;
+    /*margin-bottom: 71px;*/
+    margin-left: 47px;
+    margin-right: 47px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.divVideo video{
     position: absolute;
     min-height: 100%;
     top: 50%;

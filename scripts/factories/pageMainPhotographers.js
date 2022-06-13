@@ -56,7 +56,7 @@ const createCard = (path, media) => {
         heart.setAttribute("class", "heartImage")
 
         card.append(a)
-        card.append(divImage)
+        a.append(divImage)
         divImage.append(img)
         card.append(divText)
         divText.append(title)
@@ -68,7 +68,7 @@ const createCard = (path, media) => {
         a.setAttribute("href", path)
         a.classList.add('linkLightbox');
         const divImage = document.createElement('div')
-        divImage.setAttribute("class", "divImage")
+        divImage.setAttribute("class", "divVideo")
         const video = document.createElement('video')
         video.controls = true
         video.setAttribute("class", "imagesQuadrillage")
