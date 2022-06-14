@@ -46,7 +46,6 @@ main{
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,6 +105,15 @@ form input {
     border-radius: 5px;
 }
 
+.contactezMoi{
+    font-size: 64px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 150px;
+}
+
 .contact_button {
     font-size: 20px;
     font-weight: bold;
@@ -149,6 +157,7 @@ input[data-error]::after {
     color: red;
 } 
 
+
 /* ---header--- */
 
 /*
@@ -156,13 +165,6 @@ input[data-error]::after {
     
 }
 */
-.contactezMoi{
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
 
 .name__pp_photographers{
     font-size: 64px;
