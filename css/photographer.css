@@ -57,6 +57,7 @@ main{
     position: fixed;
     top: 5%;
     left: 25%;
+    z-index: 10;
 }
 
 /* header formulaire */
@@ -429,7 +430,7 @@ form input {
     padding: 8px;
     border-radius: 5px;
     position: fixed;
-    z-index: 10;
+    z-index: 2;
     left: 250px;
 }
 
