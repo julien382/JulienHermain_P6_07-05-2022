@@ -3,7 +3,6 @@ body {
     margin: 0;
 }
 
-
 header {
     display: flex;
     flex-direction: row;
@@ -38,7 +37,7 @@ main{
     margin: 0 100px;
 }*/
 
-/* modal formulaire */
+/* ---modal formulaire--- */
 
 #contact_modal {
     display: none;
@@ -60,7 +59,7 @@ main{
     z-index: 10;
 }
 
-/* header formulaire */
+/* ---header formulaire--- */
 
 .contactHeader{
     display: flex;
@@ -73,25 +72,8 @@ main{
 .contactHeader img{
     cursor: pointer;
 }
-/*
-.name_photographer_section{
-    
-}
-*/
-.contactezMoi{
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
 
-.name__pp_photographers{
-    font-size: 64px;
-    margin: 0;
-}
-
-/* formulaire */
+/* ---formulaire--- */
 
 form {
     display: flex;
@@ -139,8 +121,53 @@ form input {
     margin-right: 150px;
 }
 
-/*  header */
+/*  ---formulaire-Data-Error--- */
+.formData{
+    margin-top: 5px;
+}
+.formData[data-error]::after {
+    content: attr(data-error);
+    font-size: 20px;
+    color: #e54858;
+    display: block;
+    margin-top: 7px;
+    text-align: left;
+    line-height: 0.3;
+    opacity: 0;
+    transition: 0.3s;
+}
+.formData[data-error-visible="true"]::after {
+    opacity: 1;
+}
+.formData[data-error-visible="true"] .text-control {
+    border: 2px solid #e54858;
+}
 
+input[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.4em;
+    color: red;
+} 
+
+/* ---header--- */
+
+/*
+.name_photographer_section{
+    
+}
+*/
+.contactezMoi{
+    font-size: 64px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.name__pp_photographers{
+    font-size: 64px;
+    margin: 0;
+}
 .pp_photographers{
     display: flex;
     align-items: center;
@@ -186,7 +213,7 @@ form input {
 }
 
 
-/* pictures */ 
+/* ---pictures--- */ 
 
 .pictures{
     display: flex;
@@ -279,7 +306,7 @@ form input {
     margin-top: 10px;
 }
 
-/* lightbox */
+/* ---lightbox--- */
 
 #lightbox_modal {
     display: block;
@@ -417,7 +444,7 @@ form input {
     margin-right: 25px;
 }
 
-/* tri */
+/* ---tri--- */
 
 .tri{
     margin-left: 100px;
@@ -463,29 +490,3 @@ form input {
     height: 1px;
     background-color: white;
 }
-.formData{
-    margin-top: 5px;
-}
-.formData[data-error]::after {
-    content: attr(data-error);
-    font-size: 20px;
-    color: #e54858;
-    display: block;
-    margin-top: 7px;
-    text-align: left;
-    line-height: 0.3;
-    opacity: 0;
-    transition: 0.3s;
-  }
-  .formData[data-error-visible="true"]::after {
-    opacity: 1;
-  }
-  .formData[data-error-visible="true"] .text-control {
-    border: 2px solid #e54858;
-  }
-  
-  input[data-error]::after {
-      content: attr(data-error);
-      font-size: 0.4em;
-      color: red;
-  } 
