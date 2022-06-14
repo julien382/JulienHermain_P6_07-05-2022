@@ -29,7 +29,7 @@ const createCard = (media, totalLike) => {
     //card.append(priceMonth)
     const textPriceM = document.createElement('p')
     textPriceM.innerText = "€ /jour"
-    console.log(textPriceM);
+    //console.log(textPriceM);
     card.append(textPriceM)
     
     return card

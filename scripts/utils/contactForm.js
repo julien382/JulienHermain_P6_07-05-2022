@@ -19,51 +19,51 @@ export const formHandler = () => {
 
 /////////////////////////////////////
 
-const modalBtnSubmit = document.querySelectorAll(".contact_button");
 
 // validate
 let USER_INPUT = {
     firstname: {
-      value: null,
-      validate: false
+        value: null,
+        validate: false
     },
     lastname: {
-      value: null,
+        value: null,
       validate: false
     },
     email: {
-      value: null,
-      validate: false
+        value: null,
+        validate: false
     },
-  }
-  
-  let USER_INPUTOriginal = {
-    firstname: {
-      value: null,
-      validate: false
-    },
-    lastname: {
-      value: null,
-      validate: false
-    },
-    email: {
-      value: null,
-      validate: false
-    },
-  }
-  
-  // DOM Elements
+}
 
-  //data-error
-  const formData = document.querySelectorAll(".formData");
-  
-  //input
-  const form = document.querySelector("form");
-  const first = document.querySelector("#firstName");
-  const last = document.querySelector("#lastName");
-  const email = document.querySelector("#email");
-  
-  /////////////////////////////////////
+let USER_INPUTOriginal = {
+    firstname: {
+        value: null,
+        validate: false
+    },
+    lastname: {
+        value: null,
+        validate: false
+    },
+    email: {
+        value: null,
+        validate: false
+    },
+}
+
+// DOM Elements
+const modalBtnSubmit = document.querySelectorAll(".contact_button");
+
+//data-error
+const formData = document.querySelectorAll(".formData");
+
+//input
+const form = document.querySelector("form");
+const first = document.querySelector("#firstName");
+const last = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+
+/////////////////////////////////////
   
   // input
   const handlerFirstInput = (event) => {
@@ -71,6 +71,7 @@ let USER_INPUT = {
     const value = event.target.value
     const formData = first.parentElement
     USER_INPUT.firstname.value = value
+    console.log(event)
   
     if (value.length <= 1) {
       USER_INPUT.firstname.validate = false
