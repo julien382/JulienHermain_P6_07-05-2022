@@ -15,7 +15,7 @@ export const formHandler = () => {
         btn.addEventListener("click", launchModal)
     });
     cross.addEventListener("click", closeModal);
-}
+
 
 /////////////////////////////////////
 
@@ -165,11 +165,11 @@ const message = document.querySelector("#message");
       const form = document.querySelector("form");
       form.reset()
       USER_INPUT = USER_INPUTOriginal;
-      const formDataVali = email.parentElement
+      const formDataVali = message.parentElement
       formDataVali.setAttribute('data-error-visible', false)
     } else {
       console.warn('Attention: le formulaire a mal été rempli');
-      const formDataV = email.parentElement
+      const formDataV = message.parentElement
       formDataV.setAttribute('data-error-visible', true)
       formDataV.setAttribute('data-error', "Le formulaire n'est pas valide !")
     }
@@ -187,3 +187,4 @@ const message = document.querySelector("#message");
   last.addEventListener("input", lastInput);
   email.addEventListener("input", emailInput);
   message.addEventListener("input", messageInput);
+}
