@@ -181,22 +181,23 @@ input[data-error]::after {
 }
 
 .img_pp_photographers{
+    position: relative;
     height: 200px;
     width: 200px;
-    border-radius: 50%;
     overflow: hidden;
-    position: relative;
+    border-radius: 50%;
     margin-bottom: 25px;
     margin-right: 200px;
 }
 
 .img_pp_photographers img{
     position: absolute;
+    min-height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    max-width: 100%;
+    max-width: 155%;
 }
 
 .name_pp_photographers{
