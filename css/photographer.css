@@ -193,10 +193,10 @@ input[data-error]::after {
 .img_pp_photographers img{
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
-    max-width: 155%;
+    max-width: 100%;
 }
 
 .name_pp_photographers{
