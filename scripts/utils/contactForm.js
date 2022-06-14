@@ -34,6 +34,10 @@ let USER_INPUT = {
         value: null,
         validate: false
     },
+    message: {
+        value: null,
+        validate: false
+    },
 }
 
 let USER_INPUTOriginal = {
@@ -46,6 +50,10 @@ let USER_INPUTOriginal = {
         validate: false
     },
     email: {
+        value: null,
+        validate: false
+    },
+    message: {
         value: null,
         validate: false
     },
@@ -62,6 +70,7 @@ const form = document.querySelector("form");
 const first = document.querySelector("#firstName");
 const last = document.querySelector("#lastName");
 const email = document.querySelector("#email");
+const message = document.querySelector("#message");
 
 /////////////////////////////////////
   
@@ -118,6 +127,22 @@ const email = document.querySelector("#email");
       console.log("ko")
     }
   }
+
+  const messageInput = (event) => {
+    const value = event.target.value
+    const formData = message.parentElement
+    USER_INPUT.message.value = value
+  
+    if (value.length <= 1) {
+      USER_INPUT.message.validate = false
+      formData.setAttribute('data-error-visible', true)
+      formData.setAttribute('data-error', 'Le message doit comporter au moins 2 caractères !')
+    }
+    else {
+      USER_INPUT.message.validate = true
+      formData.setAttribute('data-error-visible', false)
+    }
+  }
   
   const validate = (event) => {
     // on arrête le comportement par défaut (new page)
@@ -140,13 +165,13 @@ const email = document.querySelector("#email");
       const form = document.querySelector("form");
       form.reset()
       USER_INPUT = USER_INPUTOriginal;
-      //const formDataVali = cgu.parentElement
-      //formDataVali.setAttribute('data-error-visible', false)
+      const formDataVali = email.parentElement
+      formDataVali.setAttribute('data-error-visible', false)
     } else {
       console.warn('Attention: le formulaire a mal été rempli');
-      //const formDataV = cgu.parentElement
-      //formDataV.setAttribute('data-error-visible', true)
-      //formDataV.setAttribute('data-error', "Le formulaire n'est pas valide !")
+      const formDataV = email.parentElement
+      formDataV.setAttribute('data-error-visible', true)
+      formDataV.setAttribute('data-error', "Le formulaire n'est pas valide !")
     }
   }
   
@@ -161,3 +186,4 @@ const email = document.querySelector("#email");
   first.addEventListener("input", handlerFirstInput);
   last.addEventListener("input", lastInput);
   email.addEventListener("input", emailInput);
+  message.addEventListener("input", messageInput);
