@@ -19,6 +19,8 @@ export const formHandler = () => {
 
 /////////////////////////////////////
 
+const modalBtnSubmit = document.querySelectorAll(".contact_button");
+
 // validate
 let USER_INPUT = {
     firstname: {
@@ -132,22 +134,24 @@ let USER_INPUT = {
     }
   
     if (isValid) {
-      modalbg.classList.remove("appear");
-      modalbgContentThanks.classList.add("appear");
+      //modalbg.classList.remove("appear");
+      //modalbgContentThanks.classList.add("appear");
       const form = document.querySelector("form");
       form.reset()
       USER_INPUT = USER_INPUTOriginal;
-      const formDataVali = cgu.parentElement
-      formDataVali.setAttribute('data-error-visible', false)
+      //const formDataVali = cgu.parentElement
+      //formDataVali.setAttribute('data-error-visible', false)
     } else {
       console.warn('Attention: le formulaire a mal été rempli');
-      const formDataV = cgu.parentElement
-      formDataV.setAttribute('data-error-visible', true)
-      formDataV.setAttribute('data-error', "Le formulaire n'est pas valide !")
+      //const formDataV = cgu.parentElement
+      //formDataV.setAttribute('data-error-visible', true)
+      //formDataV.setAttribute('data-error', "Le formulaire n'est pas valide !")
     }
   }
   
   /////////////////////////////////////
+
+  modalBtnSubmit.forEach((btn) => btn.addEventListener("click", validate));
 
   /// form validate ///
   form.addEventListener('submit', validate)
