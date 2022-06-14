@@ -430,7 +430,6 @@ form input {
     color: white;
     padding: 8px;
     border-radius: 5px;
-    position: fixed;
     z-index: 2;
     left: 80px;
     position: absolute;
