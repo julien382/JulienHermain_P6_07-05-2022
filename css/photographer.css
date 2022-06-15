@@ -20,7 +20,7 @@ h1 {
 }
 
 main{
-    width: 100%;
+    max-width: 100vw;
     padding-left: 80px;
     padding-right: 80px;
 }

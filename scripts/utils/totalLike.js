@@ -1,4 +1,4 @@
-export const displayMediaLike = async (medias) => {
+export const displayMediaLike = (medias) => {
     const tLike = document.querySelector(".compteur");
 
     let totalLike = 0
@@ -6,12 +6,14 @@ export const displayMediaLike = async (medias) => {
     medias.forEach(media => {
         totalLike += media.likes
 
-        const card = createCard()
-        tLike.append(card)
     });
+
+    const card = createCard()
+    tLike.append(card)
     console.log(totalLike);
 };
 
+// createLikesCard
 const createCard = (media, totalLike) => {
 
     const card = document.createElement('div');
