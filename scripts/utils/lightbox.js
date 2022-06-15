@@ -52,7 +52,7 @@ export class Lightbox {
   next (e) {
     e.preventDefault()
     let i = this.images.findIndex(image => image == this.url)
-    if (i == this.images.lenght - 1) {
+    if (i == this.images.length - 1) {
       i = -1
     }
     this.loadImage(this.images[i + 1])
@@ -72,7 +72,7 @@ export class Lightbox {
     // const mp4Regex = /^\w+.(mp4)$/ ==> regex .mp4
     const dom = document.createElement('div')
     dom.classList.add('lightbox')
-    dom.innerHTML = `
+    /*dom.innerHTML = `
     <div class="lightbox__container_all">
       <div class="lightbox__container">
           <button class="lightbox__close lightbox_close"></button>
@@ -85,7 +85,12 @@ export class Lightbox {
             <p class="title_image">Arc-en-ciel</p>
           </div>
       </div>
-    </div>`
+    </div>`*/
+    dom.innerHTML = `
+      <button class="lightbox__close lightbox_close"></button>
+      <button class="lightbox__next"></button>
+      <button class="lightbox__prev"></button>
+      <div class="lightbox__container"></div>`
     dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this))
     dom.querySelector('.lightbox__next').addEventListener('click', this.next.bind(this))
     dom.querySelector('.lightbox__prev').addEventListener('click', this.prev.bind(this))
