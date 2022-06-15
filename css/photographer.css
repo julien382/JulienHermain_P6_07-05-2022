@@ -309,7 +309,7 @@ input[data-error]::after {
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .heartImage .full{
