@@ -20,13 +20,21 @@ const init = async () => {
     formHandler()
 
     // !! a faire uniquement quand le DOM est "fabriqué" !!
-    const links = document.querySelectorAll('.linkLightbox');
+    const links = Array.from(document.querySelectorAll('.linkLightbox'))
+    const gallery = links.map(link => link.getAttribute('href'))
     links.forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault()
-            new Lightbox(event.currentTarget.getAttribute('href'))
+            new Lightbox(event.currentTarget.getAttribute('href'), gallery)
         })
     })
+/*
+    const links = Array.from(document.querySelectorAll('.linkLightbox'))
+    const gallery = links.map(link => link.getAttribute('href'))
+    links.forEach(link => link.addEventListener('click', event => {
+        event.preventDefault()
+        new Lightbox(event.currentTarget.getAttribute('href'))
+    }))*/
 
     
 }
