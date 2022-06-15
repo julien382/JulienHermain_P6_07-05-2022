@@ -2,19 +2,16 @@ export const displayMediaLike = (medias) => {
     const tLike = document.querySelector(".compteur");
 
     let totalLike = 0
-
     medias.forEach(media => {
         totalLike += media.likes
-
     });
 
-    const card = createCard()
+    const card = createCard(totalLike)
     tLike.append(card)
-    console.log(totalLike);
 };
 
 // createLikesCard
-const createCard = (media, totalLike) => {
+const createCard = (totalLike) => {
 
     const card = document.createElement('div');
     card.classList.add('totalPriceMonth')
