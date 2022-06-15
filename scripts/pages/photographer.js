@@ -6,6 +6,7 @@ import { getParamUrl } from "../utils/paramUrl.js";
 import { formHandler } from "../utils/contactForm.js";
 import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
+import { likesHandler } from "../utils/likesHandler.js";
 
 const init = async () => {
     const id = getParamUrl("id")
@@ -16,6 +17,7 @@ const init = async () => {
     displayMedia(medias, photographer.name)
     displayDataName(photographer)
     displayMediaLike(medias)
+    likesHandler()
 
     formHandler()
 

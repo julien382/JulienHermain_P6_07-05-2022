@@ -46,8 +46,18 @@ const createCard = (path, media) => {
         const nLikes = document.createElement('p')
         nLikes.setAttribute("class", "nombreLikes")
         nLikes.innerText = media.likes
-        const heart = document.createElement('img')
+        const heart = document.createElement('div')
         heart.setAttribute("class", "heartImage")
+
+        const full = document.createElement('img')
+        full.classList.add('full')
+        full.src = "../../assets/icons/heart.svg"
+        const empty = document.createElement('img')
+        empty.classList.add('empty')
+        empty.src = "../../assets/icons/heart_empty.svg"
+
+        heart.append(full)
+        heart.append(empty)
 
         card.append(a)
         a.append(divImage)
