@@ -16,7 +16,7 @@ export class Lightbox {
   loadImage (url) {
     this.url = null
     const image = new Image()
-    const container = this.element.querySelector('.lightbox__container')
+    const container = this.element.querySelector('.lightbox_image')
     const loader = document.createElement('div')
     loader.classList.add('lightbox__loader')
     container.innerHTML = ''
@@ -72,25 +72,25 @@ export class Lightbox {
     // const mp4Regex = /^\w+.(mp4)$/ ==> regex .mp4
     const dom = document.createElement('div')
     dom.classList.add('lightbox')
-    /*dom.innerHTML = `
-    <div class="lightbox__container_all">
-      <div class="lightbox__container">
-          <button class="lightbox__close lightbox_close"></button>
-          <button class="lightbox__next"></button>
-          <button class="lightbox__prev"></button>
-          <div class="lightbox_image">
-            <img src="${url}" alt="">
-          </div>
-          <div class="lightbox_text">
-            <p class="title_image">Arc-en-ciel</p>
-          </div>
-      </div>
-    </div>`*/
     dom.innerHTML = `
+    <div class="lightbox__container_all">
       <button class="lightbox__close lightbox_close"></button>
       <button class="lightbox__next"></button>
       <button class="lightbox__prev"></button>
-      <div class="lightbox__container"></div>`
+      <div class="lightbox__container">
+        <div class="lightbox_image">
+          <img src="${url}" alt="">
+        </div>
+        <div class="lightbox_text">
+          <p class="title_image">Arc-en-ciel</p>
+        </div>
+      </div>
+    </div>`
+    /*dom.innerHTML = `
+      <button class="lightbox__close lightbox_close"></button>
+      <button class="lightbox__next"></button>
+      <button class="lightbox__prev"></button>
+      <div class="lightbox__container"></div>`*/
     dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this))
     dom.querySelector('.lightbox__next').addEventListener('click', this.next.bind(this))
     dom.querySelector('.lightbox__prev').addEventListener('click', this.prev.bind(this))
