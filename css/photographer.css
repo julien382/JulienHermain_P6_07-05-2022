@@ -453,7 +453,6 @@ input[data-error]::after {
     margin-bottom: auto;
     margin-left: 5px;
     margin-right: 40px;
-    color: #312E2E;
 }
 
 .totalPriceMonth{
