@@ -24,7 +24,7 @@ const createCard = (totalLike) => {
     heart.setAttribute("class", "heartTLike")
 
     heart.classList.add('heartTLike')
-    heart.src = "../../assets/icons/heartTLike.svg"
+    heart.src = "../../assets/icons/heartLikeTotal.svg"
 
     card.append(heart)
     //const priceMonth = document.createElement('p')
