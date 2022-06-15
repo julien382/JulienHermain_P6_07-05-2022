@@ -15,7 +15,6 @@ const createCard = (totalLike) => {
 
     const card = document.createElement('div');
     card.classList.add('totalPriceMonth')
-    console.log(totalLike);
     const pLike = document.createElement('p')
     pLike.setAttribute("class", "pNumberLike")
     pLike.innerText = totalLike

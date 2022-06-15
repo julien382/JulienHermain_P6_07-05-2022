@@ -4,7 +4,6 @@ export const displayMedia = async (medias, photographerName) => {
     // Mimi keel ==> Mimi
     const firstName = photographerName.split(' ')[0]
     const cleanFirstName = firstName.replace("-", " ");
-    console.log(cleanFirstName);
 
     let totalLike = 0
 
