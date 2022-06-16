@@ -16,9 +16,8 @@ const init = async () => {
     displayData(photographer)
     displayMedia(medias, photographer.name)
     displayDataName(photographer)
-    displayMediaLike(medias)
+    displayMediaLike(medias, photographer.price)
     likesHandler()
-
     formHandler()
 
     // !! a faire uniquement quand le DOM est "fabriqué" !!

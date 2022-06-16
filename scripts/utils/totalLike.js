@@ -11,7 +11,14 @@ export const displayMediaLike = (medias) => {
 };
 
 // createLikesCard
-const createCard = (totalLike) => {
+const createCard = (totalLike, data) => {
+
+    //const { name, id, city, country, tagline, price, portrait } = data;
+
+    //const priceDay = document.createElement( 'p' );
+    //priceDay.textContent = price;
+    //priceDay.setAttribute("class", "name_pp_photographers")
+    //divText.appendChild(priceDay);
 
     const card = document.createElement('div');
     card.classList.add('totalPriceMonth')
