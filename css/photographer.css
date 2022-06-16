@@ -43,6 +43,8 @@ main{
 }
 
 .modal {
+    max-height: 85vh;
+    overflow: auto;
     border-radius: 5px;
     background-color: #DB8876;
     display: flex;
