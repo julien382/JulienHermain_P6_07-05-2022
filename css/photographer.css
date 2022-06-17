@@ -116,7 +116,7 @@ form input {
     margin-right: 150px;
 }
 
-.contact_button {
+.contact_button, .contact_submit{
     font-size: 20px;
     font-weight: bold;
     color: white;

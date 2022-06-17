@@ -60,7 +60,7 @@ let USER_INPUTOriginal = {
 }
 
 // DOM Elements
-const modalBtnSubmit = document.querySelectorAll(".contact_button");
+const modalBtnSubmit = document.querySelectorAll(".contact_submit");
 
 //data-error
 const formData = document.querySelectorAll(".formData");
