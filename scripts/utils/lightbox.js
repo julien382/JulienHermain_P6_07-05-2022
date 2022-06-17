@@ -80,10 +80,10 @@ export class Lightbox {
 
     if (!mp4Regex.test(url)) {
       dom.innerHTML = `
-      <div class="lightbox__container_all">
-        <button class="lightbox__close lightbox_close"></button>
-        <button class="lightbox__next"></button>
-        <button class="lightbox__prev"></button>
+      <div class="lightbox__container_all" aria-label='image closeup view'>
+        <button class="lightbox__close lightbox_close" alt="Close dialog"></button>
+        <button class="lightbox__next" alt="Next image"></button>
+        <button class="lightbox__prev" alt="Previous image"></button>
         <div class="lightbox__container">
           <div class="lightbox_image">
             <img src="${url}" alt="">

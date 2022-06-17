@@ -24,6 +24,7 @@ const createCard = (path, media) => {
     if (!mp4Regex.test(path)) {
         const a = document.createElement('a')
         a.setAttribute("href", path)
+        a.setAttribute("aria-label", "closeup view")
         a.classList.add('linkLightbox'); 
 
         const divImage = document.createElement('div')
@@ -53,9 +54,11 @@ const createCard = (path, media) => {
 
         const full = document.createElement('img')
         full.classList.add('full')
+        full.setAttribute("alt", "Likes")
         full.src = '../../assets/icons/heart.svg'
         const empty = document.createElement('img')
         empty.classList.add('empty')
+        empty.setAttribute("alt", "Likes")
         empty.src = '../../assets/icons/heart_empty.svg'
 
         heart.append(full)
@@ -95,9 +98,11 @@ const createCard = (path, media) => {
 
         const full = document.createElement('img')
         full.classList.add('full')
+        full.setAttribute("alt", "Likes")
         full.src = '../../assets/icons/heart.svg'
         const empty = document.createElement('img')
         empty.classList.add('empty')
+        empty.setAttribute("alt", "Likes")
         empty.src = '../../assets/icons/heart_empty.svg'
 
         heart.append(full)

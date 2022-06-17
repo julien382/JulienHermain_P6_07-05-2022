@@ -31,10 +31,12 @@ export const indexPhotographerFactory = (data) => {
         pTagline.textContent = tagline;
 
         button.setAttribute("class", "contact_button")
+        button.setAttribute("name", "Contact Me")
         button.textContent = "Contactez-moi";
 
         divImage.setAttribute("class", "img_pp_photographers")
         img.setAttribute("src", picture)
+        img.setAttribute("alt", " ")
 
         //
 
