@@ -1,4 +1,4 @@
-export const displayMediaLike = (medias) => {
+export const displayMediaLike = (medias, price) => {
     const tLike = document.querySelector(".compteur");
 
     let totalLike = 0
@@ -6,19 +6,12 @@ export const displayMediaLike = (medias) => {
         totalLike += media.likes
     });
 
-    const card = createCard(totalLike)
+    const card = createCard(totalLike, price)
     tLike.append(card)
 };
 
 // createLikesCard
-const createCard = (totalLike, data) => {
-
-    //const { name, id, city, country, tagline, price, portrait } = data;
-
-    //const priceDay = document.createElement( 'p' );
-    //priceDay.textContent = price;
-    //priceDay.setAttribute("class", "name_pp_photographers")
-    //divText.appendChild(priceDay);
+const createCard = (totalLike, price) => {
 
     const card = document.createElement('div');
     card.classList.add('totalPriceMonth')
@@ -33,9 +26,9 @@ const createCard = (totalLike, data) => {
     heart.src = "../../assets/icons/heartLikeTotal.svg"
 
     card.append(heart)
-    //const priceMonth = document.createElement('p')
-    //priceMonth.innerText = photographers.name.price
-    //card.append(priceMonth)
+    const priceMonth = document.createElement('p')
+    priceMonth.innerText = price
+    card.append(priceMonth)
     const textPriceM = document.createElement('p')
     textPriceM.innerText = "€ /jour"
     //console.log(textPriceM);

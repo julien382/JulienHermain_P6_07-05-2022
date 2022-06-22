@@ -32,6 +32,7 @@ const createCard = (path, media) => {
 
         const img = document.createElement('img')
         img.setAttribute("class", "imagesQuadrillage")
+        img.setAttribute("alt", media.title)
         img.src = path
 
         const divText = document.createElement('div')
