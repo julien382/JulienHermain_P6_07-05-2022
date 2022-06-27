@@ -10,7 +10,14 @@ export const displayTri = async (medias, photographerName) => {
 
     console.log(objArr);
 
+    /*
+    const objArr = ["Shanghai", "Tokyo", "Sao Paulo", "Delhi"]
 
+    objArr.sort()
+
+    console.log(objArr);*/
+
+    
     /*const numbers = [1,2,3]
 
     numbers.sort((a,b) => {
