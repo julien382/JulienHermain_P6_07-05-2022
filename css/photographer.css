@@ -469,7 +469,7 @@ input[data-error]::after {
     margin-left: 100px;
     font-weight: bold;
     display: flex;
-    position: relative;
+    position: relative;   
 }
 
 .trierPar{
@@ -484,6 +484,7 @@ input[data-error]::after {
     z-index: 2;
     left: 80px;
     position: absolute;
+    overflow: hidden;
 }
 
 .elementTri__flex{
@@ -515,6 +516,13 @@ input[data-error]::after {
     height: 1.5px;
     background-color: white;
 }
+
+input:checked + .elementTri__arrow .elementTri__text {
+    height: 45px;
+}
+
+
+/*             */
 
 .a11y-nav{
     position: absolute;
