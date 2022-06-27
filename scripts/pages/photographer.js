@@ -7,6 +7,7 @@ import { formHandler } from "../utils/contactForm.js";
 import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
 import { likesHandler } from "../utils/likesHandler.js";
+import { displayTri } from "../utils/tri.js";
 
 const init = async () => {
     const id = getParamUrl("id")
@@ -19,6 +20,7 @@ const init = async () => {
     displayMediaLike(medias, photographer.price)
     likesHandler()
     formHandler()
+    displayTri()
 
     // !! a faire uniquement quand le DOM est "fabriqué" !!
     const links = Array.from(document.querySelectorAll('.linkLightbox'))
