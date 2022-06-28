@@ -517,10 +517,17 @@ input[data-error]::after {
     background-color: white;
 }
 
-input:checked + .elementTri__arrow .elementTri__text {
+input:checked + .elementTri__arrow .elementTri {
     height: 45px;
 }
 
+input:checked + .elementTri__arrow {
+    transform: rotate(180deg);
+}
+/*
+#triDéplié{
+    display: none;
+}
 
 /*             */
 
