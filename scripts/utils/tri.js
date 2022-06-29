@@ -1,31 +1,28 @@
-export const displayTri = async (medias, photographerName) => {
-    const objArr = [
-        {city: "Shanghai", pop: 24},
-        {city: "Tokyo", pop: 37},
-        {city: "Sao Paulo", pop: 21},
-        {city: "Delhi", pop: 29},
-    ]
+import { displayMedia } from "../factories/pageMainPhotographers.js";
 
-    objArr.sort((a,b) => a.pop - b.pop)
+export const sortByLikes = async (medias, photographer) => {
+    medias.sort((a,b) => a.likes - b.likes)
 
-    console.log(objArr);
-
-    /*
-    const objArr = ["Shanghai", "Tokyo", "Sao Paulo", "Delhi"]
-
-    objArr.sort()
-
-    console.log(objArr);*/
-
+    const picturesDom = document.querySelector('.pictures')
+    picturesDom.innerHTML = ''
     
-    /*const numbers = [1,2,3]
-
-    numbers.sort((a,b) => {
-        console.log(`${a} - ${b}`);
-
-        return a - b;
-    })*/
+    displayMedia(medias, photographer.name)
 };
+
+/*
+const objArr = ["Shanghai", "Tokyo", "Sao Paulo", "Delhi"]
+
+objArr.sort()
+
+console.log(objArr);*/
+
+/*const numbers = [1,2,3]
+
+numbers.sort((a,b) => {
+    console.log(`${a} - ${b}`);
+
+    return a - b;
+})*/
 
 
 

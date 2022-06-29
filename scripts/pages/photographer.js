@@ -7,7 +7,7 @@ import { formHandler } from "../utils/contactForm.js";
 import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
 import { likesHandler } from "../utils/likesHandler.js";
-import { displayTri } from "../utils/tri.js";
+import { sortByLikes } from "../utils/tri.js";
 
 const init = async () => {
     const id = getParamUrl("id")
@@ -20,25 +20,22 @@ const init = async () => {
     displayMediaLike(medias, photographer.price)
     likesHandler()
     formHandler()
-    displayTri()
 
+    
     // !! a faire uniquement quand le DOM est "fabriqué" !!
     const links = Array.from(document.querySelectorAll('.linkLightbox'))
-    const gallery = links.map(link => link.getAttribute('href'))
     links.forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault()
-            new Lightbox(event.currentTarget.getAttribute('href'), gallery)
+            new Lightbox(event.currentTarget.getAttribute('href'), medias)
         })
     })
-/*
-    const links = Array.from(document.querySelectorAll('.linkLightbox'))
-    const gallery = links.map(link => link.getAttribute('href'))
-    links.forEach(link => link.addEventListener('click', event => {
-        event.preventDefault()
-        new Lightbox(event.currentTarget.getAttribute('href'))
-    }))*/
-
+    
+    // a répéter pour les autre trie
+    // const byLikes = document.querySelector('.popularité')
+    //     byLikes.addEventListener('click', () => {
+    //         sortByLikes(medias, photographer)
+    // })
     
 }
 init();
