@@ -20,6 +20,7 @@ const init = async () => {
     displayMediaLike(medias, photographer.price)
     likesHandler()
     formHandler()
+    sortByLikes(medias, photographer)
 
     
     // !! a faire uniquement quand le DOM est "fabriqué" !!

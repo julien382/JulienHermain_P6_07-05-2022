@@ -464,7 +464,7 @@ input[data-error]::after {
 }
 
 /* ---tri--- */
-
+/*
 .tri{
     margin-left: 100px;
     font-weight: bold;
@@ -527,7 +527,7 @@ input:checked + .elementTri__arrow {
 /*
 #triDéplié{
     display: none;
-}
+}*/
 
 /*             */
 
@@ -557,4 +557,66 @@ input:checked + .elementTri__arrow {
 .textArea{
  width: 100%;
  height: 50px;
+}
+
+/*** tri 2 ***/
+/*
+.tri{
+    margin-left: 100px;
+    font-weight: bold;
+    display: flex;
+    position: relative;   
+}
+
+.trierPar{
+    margin-right: 20px;
+}
+
+.elementTri{
+    background-color: #901C1C;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 2;
+    left: 80px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.elementTri__flex{
+    display: flex;
+    align-items: center;
+}
+
+.elementTri__text{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: #901C1C;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.elementTri__arrow{
+    background: url(../assets/icons/arrowBottom.svg) center center / 100% 100%;
+    width: 16px;
+    height: 9.88px;
+    margin-left: 28px;
+    margin-right: 12px;
+}
+
+.elementTri__separator{
+    width: 100%;
+    height: 1.5px;
+    background-color: white;
+}*/
+
+/** tri 3 **/
+
+.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
