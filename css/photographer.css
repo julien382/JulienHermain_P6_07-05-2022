@@ -569,12 +569,46 @@ a{
     text-decoration: none;
     color: black;
 }
+/* */
 
 nav {
-    display: none;
+    
+}
+
+
+
+.tri{
+    margin-left: 100px;
+    font-weight: bold;
+    display: flex;
+    position: relative;   
+}
+
+.trierPar{
+    margin-right: 20px;
+}
+
+.elementTri{
+    background-color: #901C1C;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 2;
+    left: 80px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
 }
 
 .open {
-    display: block;
+    background-color: #901C1C;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 2;
+    left: 80px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    height: 25px;
 }
-
