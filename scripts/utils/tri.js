@@ -8,8 +8,15 @@ export const sortByLikes = async (medias, photographer) => {
     
     displayMedia(medias, photographer.name)
 
-    const button = document.querySelector('button');
-    const nav = document.querySelector('nav');
+    var elt = document.querySelector('select');
+		elt.addEventListener('change', function () {
+			console.log(this.value);
+		})
+    /*var elt = document.querySelector('select');*/
+
+/*
+    const button = document.querySelector('.buttonArrow');
+    const nav = document.querySelector('.elementTri');
     const backdrop = document.querySelector('.backdrop');
     
     button.addEventListener('click', () => {
@@ -18,7 +25,7 @@ export const sortByLikes = async (medias, photographer) => {
     
     backdrop.addEventListener('click', () => {
       nav.classList.remove('open');
-    });
+    });*/
 };
 
 /*
