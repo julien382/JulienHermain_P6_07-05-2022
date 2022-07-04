@@ -8,8 +8,8 @@ import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
 import { likesHandler } from "../utils/likesHandler.js";
 import { sortByLikes } from "../utils/tri.js";
-import { sortByLikesDate } from "../utils/tri.js";
-import { sortByLikesTitre } from "../utils/tri.js";
+import { sortByDate } from "../utils/tri.js";
+import { sortByTitre } from "../utils/tri.js";
 
 const init = async () => {
     const id = getParamUrl("id")
@@ -35,7 +35,7 @@ const init = async () => {
     })
 
     /*--------------------------------------------------------*/
-    
+
     // a répéter pour les autre trie
      const byLikesPopularité = document.querySelector('.buttonPopularité')
          byLikesPopularité.addEventListener('click', () => {
@@ -44,12 +44,12 @@ const init = async () => {
 
      const byLikesDate = document.querySelector('.buttonDate')
          byLikesDate.addEventListener('click', () => {
-            sortByLikesDate(medias, photographer)
+            sortByDate(medias, photographer)
      })
 
      const byLikesTitre = document.querySelector('.buttonTitre')
          byLikesTitre.addEventListener('click', () => {
-            sortByLikesTitre(medias, photographer)
+            sortByTitre(medias, photographer)
      })
     
 }
