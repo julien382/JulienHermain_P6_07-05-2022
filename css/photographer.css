@@ -598,7 +598,7 @@ nav {
     display: flex;
 }
 
-.open {
+.close {
     background-color: #901C1C;
     color: white;
     padding: 8px;
@@ -609,4 +609,12 @@ nav {
     overflow: hidden;
     display: flex;
     height: 25px;
+}
+
+.elementTri__arrow{
+    background: url(../assets/icons/arrowBottom.svg) center center / 100% 100%;
+    width: 16px;
+    height: 9.88px;
+    margin-left: 28px;
+    margin-right: 12px;
 }
