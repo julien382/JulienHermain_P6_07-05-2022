@@ -1,5 +1,19 @@
 import { displayMedia } from "../factories/pageMainPhotographers.js";
 
+export const sortBy = async (medias, photographer) => {
+  let menuArrow = document.getElementById('.elementTri')
+  let checkbox = document.getElementById('.checkbox')
+
+  if(checkbox.checked){
+    menuArrow.classList.add('elementTriClose')
+    
+  }
+  else{
+    menuArrow.classList.remove('elementTriClose')
+  }
+
+};
+
 export const sortByLikes = async (medias, photographer) => {
     medias.sort((a,b) => a.likes - b.likes)
 

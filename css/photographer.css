@@ -559,6 +559,18 @@ input:checked + .elementTri__arrow {
  height: 50px;
 }
 
+.elementTriClose {
+    background-color: #901C1C;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 2;
+    left: 80px;
+    position: absolute;
+    overflow: hidden;
+    height: 44px;
+}
+
 /** tri 3 **/
 /*
 ul li{

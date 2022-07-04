@@ -7,6 +7,7 @@ import { formHandler } from "../utils/contactForm.js";
 import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
 import { likesHandler } from "../utils/likesHandler.js";
+import { sortBy } from "../utils/tri.js";
 import { sortByLikes } from "../utils/tri.js";
 import { sortByDate } from "../utils/tri.js";
 import { sortByTitre } from "../utils/tri.js";
@@ -22,6 +23,7 @@ const init = async () => {
     displayMediaLike(medias, photographer.price)
     likesHandler()
     formHandler()
+    sortBy(medias, photographer)
     //sortByLikes(medias, photographer)
 
     
