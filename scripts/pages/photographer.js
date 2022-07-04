@@ -33,6 +33,8 @@ const init = async () => {
             new Lightbox(event.currentTarget.getAttribute('href'), medias)
         })
     })
+
+    /*--------------------------------------------------------*/
     
     // a répéter pour les autre trie
      const byLikesPopularité = document.querySelector('.buttonPopularité')

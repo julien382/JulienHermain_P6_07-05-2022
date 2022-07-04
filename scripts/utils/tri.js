@@ -11,8 +11,8 @@ export const sortByLikes = async (medias, photographer) => {
 };
 
 export const sortByLikesDate = async (medias, photographer) => {
-  medias.sort((a,b) => a.likes - b.likes)
-
+  medias.sort((a,b) => a.date - b.date)
+  console.log(a.date);
   const picturesDom = document.querySelector('.pictures')
   picturesDom.innerHTML = ''
   
@@ -21,12 +21,18 @@ export const sortByLikesDate = async (medias, photographer) => {
 };
 
 export const sortByLikesTitre = async (medias, photographer) => {
-  medias.sort((a,b) => a.likes - b.likes)
+  medias.sort((a,b) => a.title - b.title)
 
   const picturesDom = document.querySelector('.pictures')
   picturesDom.innerHTML = ''
   
   displayMedia(medias, photographer.name)
+
+  const objArr = ["Shanghai", "Tokyo", "Sao Paulo", "Delhi"]
+
+objArr.sort()
+
+console.log(objArr);
 
 };
 
