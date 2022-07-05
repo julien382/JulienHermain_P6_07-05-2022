@@ -7,10 +7,10 @@ import { formHandler } from "../utils/contactForm.js";
 import { displayDataName } from "../factories/name.js";
 import { Lightbox } from "../utils/lightbox.js";
 import { likesHandler } from "../utils/likesHandler.js";
-import { sortBy } from "../utils/tri.js";
-import { sortByLikes } from "../utils/tri.js";
-import { sortByDate } from "../utils/tri.js";
-import { sortByTitre } from "../utils/tri.js";
+import { sortBy } from "../utils/sort.js";
+import { sortByLikes } from "../utils/sort.js";
+import { sortByDate } from "../utils/sort.js";
+import { sortByTitre } from "../utils/sort.js";
 
 const init = async () => {
     const id = getParamUrl("id")
