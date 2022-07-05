@@ -40,7 +40,7 @@ const init = async () => {
 
      const byArrow = document.querySelector('.elementTri__arrow')
          byArrow.addEventListener('click', () => {
-            sortBy(medias, photographer)
+            sortBy()
      })
     // a répéter pour les autre trie
      const byLikesPopularité = document.querySelector('.buttonPopularité')

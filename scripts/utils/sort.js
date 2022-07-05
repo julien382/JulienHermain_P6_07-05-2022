@@ -1,8 +1,8 @@
 import { displayMedia } from "../factories/pageMainPhotographers.js";
 
-export const sortBy = async (medias, photographer) => {
+export const sortBy = async () => {
   let menuArrow = document.getElementById('.elementTri')
-  let checkbox = document.getElementById('.checkbox')
+  let checkbox = document.getElementById('triDéplié')
 
   if(checkbox.checked){
     menuArrow.classList.remove('elementTriClose')
