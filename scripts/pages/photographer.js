@@ -23,7 +23,7 @@ const init = async () => {
     displayMediaLike(medias, photographer.price)
     likesHandler()
     formHandler()
-    sortBy(medias, photographer)
+    //sortBy(medias, photographer)
     //sortByLikes(medias, photographer)
 
     
@@ -38,6 +38,10 @@ const init = async () => {
 
     /*--------------------------------------------------------*/
 
+     const byArrow = document.querySelector('.elementTri__arrow')
+         byArrow.addEventListener('click', () => {
+            sortBy(medias, photographer)
+     })
     // a répéter pour les autre trie
      const byLikesPopularité = document.querySelector('.buttonPopularité')
          byLikesPopularité.addEventListener('click', () => {

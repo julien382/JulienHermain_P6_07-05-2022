@@ -5,11 +5,11 @@ export const sortBy = async (medias, photographer) => {
   let checkbox = document.getElementById('.checkbox')
 
   if(checkbox.checked){
-    menuArrow.classList.add('elementTriClose')
+    menuArrow.classList.remove('elementTriClose')
     
   }
   else{
-    menuArrow.classList.remove('elementTriClose')
+    menuArrow.classList.add('elementTriClose')
   }
 
 };
