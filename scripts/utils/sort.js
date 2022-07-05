@@ -37,13 +37,12 @@ export const sortByDate = async (medias, photographer) => {
 };
 
 export const sortByTitre = async (medias, photographer) => {
-  medias.sort((a,b) => a.title - b.title)
+  medias.sort((a,b) => a.title?.localeCompare(b.title));
 
   const picturesDom = document.querySelector('.pictures')
   picturesDom.innerHTML = ''
   
   displayMedia(medias, photographer.name)
-  return a.title?. localeCompare(b.title)
 };
 
  /*const button = document.querySelector('button');
