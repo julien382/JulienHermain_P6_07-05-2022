@@ -65,9 +65,9 @@ const createCard = (path, media) => {
         heart.append(full)
         heart.append(empty)
 
-        card.append(a)
-        a.append(divImage)
-        divImage.append(img)
+        card.append(divImage)
+        divImage.append(a)
+        a.append(img)
         card.append(divText)
         divText.append(title)
         divText.append(divLikes)
