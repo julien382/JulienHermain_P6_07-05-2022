@@ -1,5 +1,6 @@
 import { displayMedia } from "../factories/pageMainPhotographers.js";
 
+/* sort arrow plié déplié */
 export const sortBy = async () => {
   let menuArrow = document.getElementById('.elementTri')
   let checkbox = document.getElementById('triDéplié')
@@ -14,6 +15,7 @@ export const sortBy = async () => {
 
 };
 
+/* sort popularité/date/titre */
 export const sortByLikes = async (medias, photographer) => {
     medias.sort((a,b) => a.likes - b.likes)
 
@@ -35,7 +37,7 @@ export const sortByDate = async (medias, photographer) => {
 };
 
 export const sortByTitre = async (medias, photographer) => {
-  medias.sort((a,b) => a.likes - b.likes)
+  medias.sort((a,b) => a.title - b.title)
 
   const picturesDom = document.querySelector('.pictures')
   picturesDom.innerHTML = ''
