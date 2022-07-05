@@ -27,8 +27,8 @@ export const sortByLikes = async (medias, photographer) => {
 };
 
 export const sortByDate = async (medias, photographer) => {
-  medias.sort((a,b) => a.date - b.date)
-
+  medias.sort((a, b) => new Date(b.date) - new Date(a.date))
+ 
   const picturesDom = document.querySelector('.pictures')
   picturesDom.innerHTML = ''
   
@@ -43,7 +43,7 @@ export const sortByTitre = async (medias, photographer) => {
   picturesDom.innerHTML = ''
   
   displayMedia(medias, photographer.name)
-
+  return a.title?. localeCompare(b.title)
 };
 
  /*const button = document.querySelector('button');
