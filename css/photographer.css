@@ -486,6 +486,7 @@ input[data-error]::after {
     position: absolute;
     overflow: hidden;
     cursor: pointer;
+    margin-top: 8px;
 }
 
 .choices {
@@ -498,17 +499,34 @@ input[data-error]::after {
     position: relative;
     height: auto;
 }
+
+.divSelectArrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
 .elementTri__arrow {
     display: inline-block;
+    background: url(../assets/icons/arrowBottom.svg) center center / 100% 100%;
+    width: 16px;
+    height: 9.88px;
+    margin-left: 28px;
+    margin-right: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
 }
 .elementTri.show .elementTri__arrow {
     transform: rotate(180deg);
-}
-
-
-.elementTri__flex{
-    display: flex;
-    align-items: center;
 }
 
 .elementTri__text{
@@ -522,31 +540,11 @@ input[data-error]::after {
     font-size: 18px;
 }
 
-.elementTri__arrow{
-    background: url(../assets/icons/arrowBottom.svg) center center / 100% 100%;
-    width: 16px;
-    height: 9.88px;
-    margin-left: 28px;
-    margin-right: 12px;
-}
-
 .elementTri__separator{
     width: 100%;
     height: 1.5px;
     background-color: white;
 }
-/*
-input:checked + .elementTri__arrow .elementTri {
-    height: 45px;
-}*/
-
-input:checked + .elementTri__arrow {
-    transform: rotate(180deg);
-}
-/*
-#triDéplié{
-    display: none;
-}*/
 
 /*             */
 
@@ -577,4 +575,3 @@ input:checked + .elementTri__arrow {
  width: 100%;
  height: 50px;
 }
-
