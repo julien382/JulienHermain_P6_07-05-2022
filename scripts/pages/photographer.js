@@ -38,25 +38,35 @@ const init = async () => {
 
     /*--------------------------------------------------------*/
 
-     const byArrow = document.querySelector('.elementTri__arrow')
-         byArrow.addEventListener('click', () => {
-            sortBy()
-     })
-    // a répéter pour les autre trie
-     const byLikesPopularité = document.querySelector('.buttonPopularité')
-         byLikesPopularité.addEventListener('click', () => {
-            sortByLikes(medias, photographer)
-     })
+    const dropdown = document.querySelector('.elementTri');
+    const selected = document.querySelector('.selected');
+    const choices = document.querySelectorAll('.elementTri__text');
 
-     const byLikesDate = document.querySelector('.buttonDate')
-         byLikesDate.addEventListener('click', () => {
-            sortByDate(medias, photographer)
-     })
+    // UI dropdown
+    dropdown.addEventListener('click', () => {
+        dropdown.classList.toggle('show')
+    })
 
-     const byLikesTitre = document.querySelector('.buttonTitre')
-         byLikesTitre.addEventListener('click', () => {
-            sortByTitre(medias, photographer)
-     })
+    dropdown.addEventListener('keydown', (e) => {
+        if(e.code === "Enter") {
+            dropdown.classList.toggle('show')
+        }
+    })
+    
+    // gestion du tri
+    choices.forEach((choice) => {
+        choice.addEventListener('click', () => {
+            selected.innerHTML = choice.innerHTML
+            sortBy(choice.innerHTML, medias, photographer)
+        })
+
+        choice.addEventListener('keydown', (e) => {
+            if(e.code === "Enter") {
+                selected.innerHTML = choice.innerHTML
+                sortBy(choice.innerHTML, medias, photographer)
+            }
+        })
+    })
     
 }
 init();

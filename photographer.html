@@ -27,16 +27,18 @@
       <!--tri-->
       <div class="tri">
         <p class="trierPar">Trier par</p>
-        <div class="elementTri">
-          <div class="elementTri__flex">
-            <button  class="elementTri__text buttonPopularité" >Popularité</button>
-            <input type="checkbox" name="tridéplié" id="triDéplié" checked>
-            <label  class="elementTri__arrow" for="triDéplié"></label>
+        <div class="elementTri" tabindex="0">
+
+          <div><span class="selected">Popularité</span> <span class="elementTri__arrow"></span></div>
+
+          <div class="choices">
+            <div class="elementTri__separator"></div>
+            <div tabindex="0" class="elementTri__text">Popularité</div>
+            <div class="elementTri__separator"></div>
+            <div tabindex="0" class="elementTri__text">Date</div>
+            <div class="elementTri__separator"></div>
+            <div tabindex="0" class="elementTri__text">Titre</div>
           </div>
-          <div class="elementTri__separator"></div>
-          <button class="elementTri__text buttonDate">Date</button>
-          <div class="elementTri__separator"></div>
-          <button class="elementTri__text buttonTitre">Titre</button>
         </div>
       </div>
 
@@ -53,14 +55,14 @@
     </main>
     <!--contact_modal-->
     <div id="contact_modal">
-			<div class="modal">
-				<div class="contactHeader">
+      <div class="modal">
+        <div class="contactHeader">
           <div class="name_photographer_section"></div>
           <img src="assets/icons/closeWhite.svg" class="close" alt="Close Contact form">
         </div>
         <!--formulaire-->
-				<form>
-					<div class="formData" alt="Contact me">
+        <form>
+          <div class="formData" alt="Contact me">
             <div class="formData form">
               <label for="firstName">Prénom</label>
               <input type="text" class="" id="firstName" name="firstName"/>
@@ -77,11 +79,11 @@
               <label for="message">Votre Message</label>
               <textarea class="textArea" id="message" name="your message"></textarea>
             </div>
-					</div>
+          </div>
           <button class="contact_submit" alt="send">Envoyer</button>
-				</form>
-			</div>
-		</div>
+        </form>
+      </div>
+    </div>
 
     <!--compteur like/mois en bas à droite-->
     <div class="compteur"></div>
