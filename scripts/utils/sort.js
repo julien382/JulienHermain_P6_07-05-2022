@@ -23,7 +23,7 @@ export const sortBy = (choice, medias, photographer) => {
 
 /* sort popularité/date/titre */
 export const sortByLikes = (medias, photographer) => {
-    medias.sort((a,b) => a.likes - b.likes)
+    medias.sort((a,b) => b.likes - a.likes)
 
     const picturesDom = document.querySelector('.pictures')
     picturesDom.innerHTML = ''

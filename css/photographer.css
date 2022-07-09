@@ -486,7 +486,6 @@ input[data-error]::after {
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    margin-top: 8px;
 }
 
 .choices {
