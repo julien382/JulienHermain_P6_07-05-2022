@@ -25,6 +25,7 @@ const createCard = (path, media) => {
         const a = document.createElement('a')
         a.setAttribute("href", path)
         a.setAttribute("aria-label", "closeup view")
+        a.setAttribute("tabindex", "0")
         a.classList.add('linkLightbox'); 
 
         const divImage = document.createElement('div')
@@ -52,6 +53,7 @@ const createCard = (path, media) => {
 
         const heart = document.createElement('div')
         heart.setAttribute("class", "heartImage")
+        heart.setAttribute("tabindex", "0")
 
         const full = document.createElement('img')
         full.classList.add('full')
@@ -96,6 +98,7 @@ const createCard = (path, media) => {
         
         const heart = document.createElement('div')
         heart.setAttribute("class", "heartImage")
+        heart.setAttribute("tabindex", "0")
 
         const full = document.createElement('img')
         full.classList.add('full')
