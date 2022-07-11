@@ -25,7 +25,6 @@ const createCard = (path, media) => {
         const a = document.createElement('a')
         a.setAttribute("href", path)
         a.setAttribute("aria-label", "closeup view")
-        a.setAttribute("tabindex", "0")
         a.classList.add('linkLightbox'); 
 
         const divImage = document.createElement('div')
