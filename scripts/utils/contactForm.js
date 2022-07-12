@@ -15,11 +15,14 @@ export const formHandler = () => {
         btn.addEventListener("click", launchModal)
     });
     cross.addEventListener("click", closeModal);
+    document.addEventListener("Escape", closeModal);
 
     document.addEventListener('keydown', (event) => {
+      const echap = event.key;
     
-      if ('Escape') {
+      if (echap === 'Escape') {
         closeModal()
+        // Pas d'alerte si seule la touche Control est pressée.
         return;
       }
     })
