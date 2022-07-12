@@ -233,10 +233,8 @@ input[data-error]::after {
 }*/
 
 .divImage{
-    position: relative;
     height: 300px;
     width: 350px;
-    overflow: hidden;
     /*margin-bottom: 71px;*/
     margin-left: 47px;
     margin-right: 47px;
@@ -246,14 +244,17 @@ input[data-error]::after {
 }
 
 .linkLightbox{
+    position: relative;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
 }
-
+/*
 .linkLightbox:focus{
+    outline: solid black;
     outline-offset: 0px;
-    outline: dashed red;
-}
+}*/
 
 .divImage img{
     position: absolute;
