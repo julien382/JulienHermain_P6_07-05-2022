@@ -242,6 +242,17 @@ input[data-error]::after {
     margin-right: 47px;
     margin-top: 25px;
     border-radius: 5px;
+    display: flex;
+}
+
+.linkLightbox{
+    height: 100%;
+    width: 100%;
+}
+
+.linkLightbox:focus{
+    outline-offset: 0px;
+    outline: dashed red;
 }
 
 .divImage img{

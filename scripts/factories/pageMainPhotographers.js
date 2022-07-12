@@ -26,9 +26,11 @@ const createCard = (path, media) => {
         a.setAttribute("href", path)
         a.setAttribute("aria-label", "closeup view")
         a.classList.add('linkLightbox'); 
+        a.setAttribute("tabindex", "0")
 
         const divImage = document.createElement('div')
         divImage.setAttribute("class", "divImage")
+        divImage.setAttribute("tabindex", "0")
 
         const img = document.createElement('img')
         img.setAttribute("class", "imagesQuadrillage")
@@ -80,6 +82,7 @@ const createCard = (path, media) => {
         a.classList.add('linkLightbox');
         const divImage = document.createElement('div')
         divImage.setAttribute("class", "divVideo")
+        divImage.setAttribute("tabindex", "0")
         const video = document.createElement('video')
         video.controls = true
         video.setAttribute("class", "imagesQuadrillage")
