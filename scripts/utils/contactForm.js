@@ -15,6 +15,8 @@ export const formHandler = () => {
         btn.addEventListener("click", launchModal)
     });
     cross.addEventListener("click", closeModal);
+    document.addEventListener("Escape", closeModal);
+    
 
 
 /////////////////////////////////////
