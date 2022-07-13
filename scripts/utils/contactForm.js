@@ -1,31 +1,31 @@
 export const formHandler = () => {
-    const modalBtn = document.querySelectorAll(".contact_button");
-    const cross = document.querySelector(".close");
-    
-    const launchModal = () => {
-        contact_modal.style.display = "block";
-    }
-    
-    const closeModal = () => {
-        contact_modal.style.display = "none";
-    }
-    
-    
-    modalBtn.forEach((btn) => {
-        btn.addEventListener("click", launchModal)
-    });
-    cross.addEventListener("click", closeModal);
+  const modalBtn = document.querySelectorAll(".contact_button");
+  const cross = document.querySelector(".close");
+  
+  const launchModal = () => {
+      contact_modal.style.display = "block";
+      document.querySelector("#firstName").focus()
+  }
+  
+  const closeModal = () => {
+      contact_modal.style.display = "none";
+  }
+  
+  
+  modalBtn.forEach((btn) => {
+      btn.addEventListener("click", launchModal)
+  });
+  cross.addEventListener("click", closeModal);
 
-    document.addEventListener('keydown', (event) => {
-      const key = event.key;
-    
-      if (key === 'Escape') {
-        closeModal()
-        // Pas d'alerte si seule la touche Control est pressée.
-        return;
-      }
-    })
-    
+  document.addEventListener('keydown', (event) => {
+    const key = event.key;
+  
+    if (key === 'Escape') {
+      closeModal()
+      // Pas d'alerte si seule la touche Control est pressée.
+      return;
+    }
+  })
 
 
 /////////////////////////////////////
