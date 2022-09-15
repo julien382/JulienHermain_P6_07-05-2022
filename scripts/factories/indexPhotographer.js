@@ -19,7 +19,7 @@ export const indexPhotographerFactory = (data) => {
         const pPrice = document.createElement( 'p' );
 
         // on remplie nos balises
-        a.setAttribute("href", "/photographer.html?id=" + id)
+        a.setAttribute("href", "./photographer.html?id=" + id)
         div.setAttribute("class", "img_pp_photographer")
         img.setAttribute("src", picture)
         userCardDom.setAttribute("class", "pp_photographer")

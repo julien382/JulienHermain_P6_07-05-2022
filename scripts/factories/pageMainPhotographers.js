@@ -9,7 +9,7 @@ export const displayMedia = async (medias, photographerName) => {
         const mediaPath = media.image ? media.image : media.video
         // const mediaPath = media.image ?? media.video
 
-        const path = '../../assets/images/' + cleanFirstName + '/' + mediaPath
+        const path = './assets/images/' + cleanFirstName + '/' + mediaPath
         const card = createCard(path, media)
         pictures.append(card)
     });
@@ -57,11 +57,11 @@ const createCard = (path, media) => {
         const full = document.createElement('img')
         full.classList.add('full')
         full.setAttribute("alt", "Likes")
-        full.src = '../../assets/icons/heart.svg'
+        full.src = './assets/icons/heart.svg'
         const empty = document.createElement('img')
         empty.classList.add('empty')
         empty.setAttribute("alt", "Likes")
-        empty.src = '../../assets/icons/heart_empty.svg'
+        empty.src = './assets/icons/heart_empty.svg'
 
         heart.append(full)
         heart.append(empty)
