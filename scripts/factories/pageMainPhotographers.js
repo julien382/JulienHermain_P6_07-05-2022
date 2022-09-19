@@ -2,7 +2,7 @@ export const displayMedia = async (medias, photographerName) => {
     const pictures = document.querySelector(".pictures");
 
     const firstName = photographerName.split(' ')[0];
-    const cleanFirstName = firstName.replace("-", " "); // Enlève les tirets du prénom
+    const cleanFirstName = firstName.replace("-", " "); // Enlève les tirets du prénom (ellie-rose wilkens)
     
     medias.forEach(media => {
         // const mediaPath = est-ce que true ? si true : si false
